@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Driver;
 use App\Http\Controllers\Controller;
 
 use App\Models\Group;
-use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -16,9 +15,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $driver = Group::where('module','=','driver_category')->orderBy('id','ASC')->get();
+        $search = $request->get('search');
+        $driver = Group::where('module','=','driver_category')->where('title', 'like', '%' . $search . '%')->orderBy('id','ASC')->get();
         // dd($driver);
         return view('category/driver.index',[
             'driver' => $driver
@@ -32,7 +32,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category/driver.create');
     }
 
     /**
@@ -43,7 +43,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $input['module'] = 'driver_category';
+        Group::create($input);
+        return Redirect::route('driver-category.index');
     }
 
     /**
@@ -83,9 +86,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $item= Group::where('module','=','driver_category')->findOrFail($id);
+        $category= Group::where('module','=','driver_category')->findOrFail($id);
         $input=$request->all();
-        $item->update($input);
+        $category->update($input);
         return Redirect::route('driver-category.index');
     }
 
@@ -97,6 +100,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Group::where('id',$id)->where('module','driver_category')->FirstOrFail()->delete();
+        return Redirect::route('driver-category.index');
     }
 }

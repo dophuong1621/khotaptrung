@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Bus;
 use App\Http\Controllers\Controller;
 
 use App\Models\Group;
-use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -16,9 +15,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $bus = Group::where('module','=','bus_category')->orderBy('id','ASC')->get();
+        $search = $request->get('search');
+        $bus = Group::where('module','=','bus_category')->where('title', 'like', '%' . $search . '%')->orderBy('id','ASC')->get();
         // dd($bus);
         return view('category/bus.index',[
             'bus' => $bus
@@ -32,7 +32,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category/bus.create');
     }
 
     /**
@@ -43,7 +43,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $input['module'] = 'bus_category';
+        Group::create($input);
+        return Redirect::route('bus-category.index');
     }
 
     /**
@@ -83,9 +86,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $item= Group::where('module','=','bus_category')->findOrFail($id);
+        $category= Group::where('module','=','bus_category')->findOrFail($id);
         $input=$request->all();
-        $item->update($input);
+        $category->update($input);
         return Redirect::route('bus-category.index');
     }
 
@@ -97,6 +100,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Group::where('id',$id)->where('module','bus_category')->FirstOrFail()->delete();
+        return Redirect::route('bus-category.index');
     }
 }

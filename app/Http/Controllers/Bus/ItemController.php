@@ -15,9 +15,10 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $bus = Item::where('module','=','bus')->orderBy('id','ASC')->get();
+        $search = $request->get('search');
+        $bus = Item::where('module','=','bus')->where('title', 'like', '%' . $search . '%')->orderBy('id','ASC')->get();
         // dd($bus);
         return view('item/bus.index',[
             'bus' => $bus
@@ -31,7 +32,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('item/bus.create');
     }
 
     /**
@@ -42,7 +43,10 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $input['module'] = 'bus';
+        Item::create($input);
+        return Redirect::route('bus-item.index');
     }
 
     /**
@@ -97,6 +101,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Item::where('id',$id)->where('module','bus')->FirstOrFail()->delete();
+        return Redirect::route('bus-item.index');
     }
 }

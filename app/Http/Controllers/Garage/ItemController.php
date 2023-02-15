@@ -15,9 +15,10 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $garage = Item::where('module','=','garage')->orderBy('id','ASC')->get();
+        $search = $request->get('search');
+        $garage = Item::where('module','=','garage')->where('title', 'like', '%' . $search . '%')->orderBy('id','ASC')->get();
         // dd($garage);
         return view('item/garage.index',[
             'garage' => $garage
@@ -31,7 +32,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('item/garage.create');
     }
 
     /**
@@ -42,7 +43,10 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $input['module'] = 'garage';
+        Item::create($input);
+        return Redirect::route('garage-item.index');
     }
 
     /**
@@ -96,6 +100,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Item::where('id',$id)->where('module','garage')->FirstOrFail()->delete();
+        return Redirect::route('garage-item.index');
     }
 }

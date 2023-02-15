@@ -15,9 +15,10 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $driver = Item::where('module','=','driver')->orderBy('id','ASC')->get();
+        $search = $request->get('search');
+        $driver = Item::where('module','=','driver')->where('title', 'like', '%' . $search . '%')->orderBy('id','ASC')->get();
         // dd($driver);
         return view('item/driver.index',[
             'driver' => $driver
@@ -31,7 +32,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('item/driver.create');
     }
 
     /**
@@ -42,7 +43,10 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $input['module'] = 'driver';
+        Item::create($input);
+        return Redirect::route('driver-item.index');
     }
 
     /**
@@ -96,6 +100,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Item::where('id',$id)->where('module','driver')->FirstOrFail()->delete();
+        return Redirect::route('driver-item.index');
     }
 }

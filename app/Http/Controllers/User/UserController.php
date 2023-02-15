@@ -14,9 +14,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $user = User::orderBy('id','ASC')->paginate(3);
+        $search = $request->get('search');
+        $user = User::orderBy('id','ASC')->where('fullname', 'like', '%' . $search . '%')->paginate(3);
         return view('user.index',[
             'user' => $user
         ]);

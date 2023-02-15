@@ -5,12 +5,14 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\Request;
 
 class TrashedController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $user = User::onlyTrashed()->paginate(3);  // or withTrashed
+        $search = $request->get('search');
+        $user = User::onlyTrashed()->where('fullname', 'like', '%' . $search . '%')->paginate(3);  // or withTrashed
         // dd($user);
         return view('trashed', compact('user'));
     }
@@ -30,7 +32,7 @@ class TrashedController extends Controller
 
     public function restoreAll()
     {
-        User::onlyTrashed()->restore(); 
+        User::onlyTrashed()->restore();
         return redirect()->route('trashed.index');
     }
 }
