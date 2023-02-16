@@ -16,7 +16,7 @@ use App\Http\Controllers\Bus\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('users/home');
 });
 
 //bus
