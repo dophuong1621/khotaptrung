@@ -130,7 +130,7 @@ th {
     text-align: inherit;
     text-align: -webkit-match-parent;
 }
-/* 
+/*
 .content {
     background: #000000;
 } */
@@ -140,9 +140,35 @@ th {
 }
 
 .containerr{
-    margin: auto
+    margin: auto;
+    background-color: #F5F5F5;
 }
 
 .flex-item-cent{
     align-items: center;
+}
+
+.fw-5{
+    font-weight: 500;
+}
+
+.fw-6{
+    font-weight: 600;
+}
+
+.fw-7{
+    font-weight: 700;
+}
+
+.t-color{
+    color:#D61B10;
+}
+
+.bg-color{
+    background-color: #FEE2E2 !important;
+}
+
+.b-shadow{
+    box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+    --tw-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
 }
