@@ -1,6 +1,6 @@
-.header{
+.header {
     margin-bottom: 8px;
-        display: flex;
+    display: flex;
     justify-content: space-between;
     max-width: 72rem;
 }
@@ -14,7 +14,6 @@
     z-index: 1;
     height: 3rem;
     max-width: 100%;
-    left: -8px;
 }
 
 .h-img2 {
@@ -23,16 +22,14 @@
     position: absolute;
     max-width: 100%;
     height: auto;
-    left: -8px;
 }
 
 .d-flex {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.m-width{
+.m-width {
     max-width: 72rem !important;
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +44,7 @@
     width: 100%;
 }
 
-.t-hoa{
+.t-hoa {
     text-transform: uppercase;
 }
 
@@ -64,17 +61,17 @@
     align-items: center;
 }
 
-.atm{
+.atm {
     display: flex;
     font-weight: 700;
-   font-size: .875rem;
+    font-size: .875rem;
     line-height: 1.25rem;
     flex-wrap: nowrap;
     align-items: center;
 }
 
-.ic-color{
-    color:#D61B10;
+.ic-color {
+    color: #D61B10;
     width: 28px;
     height: 24px;
     border-radius: 0.25rem;
@@ -85,9 +82,9 @@
 }
 
 .nt-ic {
-   font-size: 1.125rem;
-   line-height: 1.75rem;
-   font-size:16px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-size: 16px;
 }
 
 .btn-login {
@@ -112,8 +109,58 @@
     color: white;
 }
 
-header{
+header {
     background-color: #FFF;
     height: 65px;
     border-bottom-width: 1px;
+}
+
+.fa-user {
+    width: 18px;
+    height: 18px;
+}
+
+.t-btn-login {
+    margin-left: 0.25rem;
+}
+
+.h-img2{
+    left: 0px;
+}
+
+.t-btn-login {
+    margin-left: 0.5rem;
+}
+
+
+/* Reponsive */
+@media screen and (max-width: 768px) {
+    .t-btn-login {
+        margin-left: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 418px) {
+    .nt,
+    .atm {
+        display: none;
+    }
+
+    .h-img1 {
+        height: 2.5rem;
+    }
+
+
+    .fa-user {
+        display: none !important;
+    }
+
+    .btn-login {
+        height: 2rem;
+    }
+
+    header {
+        background-color: #FFF;
+        height: 56px;
+    }
 }

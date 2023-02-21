@@ -34,7 +34,7 @@
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ft-t-3 fw-6">
                 <h5 class="t1-ft3">HIHAROBUX.COM</h5>
-                <span>HỆ THỐNG BÁN ACC TỰ ĐỘNG ĐẢM BẢO UY TÍN VÀ CHẤT LƯỢNG.</span>
+                <span>HỆ THỐNG BÁN ACC TỰ ĐỘNG <br>ĐẢM BẢO UY TÍN VÀ CHẤT LƯỢNG.</span><br>
                 <a href="https://www.messenger.com/t/112515915054238" target="_blank"><img
                         src="https://cdns.diongame.com/static/messenger-01.svg" style="max-width:220px;"
                         class=""></a>
