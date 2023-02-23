@@ -3,6 +3,16 @@
     line-height: 1.25rem;
 }
 
+.text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-xs{
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
 .ct {
     grid-template-columns: repeat(10,minmax(0,1fr));
     max-width: 72rem;
@@ -63,7 +73,7 @@
 .w-175 {
     width: 1.75rem;
 }
- 
+
 .h-175 {
     height: 1.75rem;
 }
@@ -72,15 +82,56 @@
     margin-left: 2rem;
 }
 
-.ml-275 {
-    margin-left: 2.75rem;
+.ntc{
+    margin: 0px;
 }
 
-ul{
-    margin-bottom: 0rem !important;
-    padding-left: 0rem !important;
+p{
+    margin-bottom:0px !important;
 }
 
-.ml-225{
-    margin-left: 2.25rem;
+.form-nt {
+    max-width: 24rem;
+}
+
+.btn-nt {
+    width: 8rem;
+    text-align: center;
+    background-color: #DC2626;
+    border: 0px;
+}
+
+.text-br-color{
+    border: 2px solid #fcd34d;
+}
+
+.tb-tn{
+    background-color: #E5E5E5;
+}
+
+.tr-table-tn{
+    letter-spacing: 0.025rem;
+}
+
+.user{
+        top: 5px;
+    position: absolute;
+    left: 7px;
+}
+
+.dx {
+    border: 0px;
+    background-color: #EF4444;
+}
+
+.dmk{
+    margin-bottom: 0px ;
+}
+
+.mkht{
+    max-width: 24rem;
+}
+
+.border-tb {
+    border-bottom: 1px solid #e5e5e5;
 }
