@@ -1,3 +1,5 @@
+@extends('users.layouts_user.home')
+@section('content')
 <div class="main-content">
     <div class="content">
         {{-- box1 --}}
@@ -51,7 +53,7 @@
                         <div class="nt-top overflow-auto mb-3">
                             <div class="px-2 d-flex justify-content-between mb-2">
                                 <div class="topl d-flex">
-                                    <div class="star"></div>
+                                    <i class="fa-solid fa-octagon">1</i>
                                     <span class="nub fw-7">ID 1633630</span>
                                 </div>
                                 <div class="topr text-white">
@@ -62,7 +64,7 @@
                             </div>
                             <div class="px-2 d-flex justify-content-between mb-2">
                                 <div class="topl d-flex">
-                                    <div class="star"></div>
+                                    <i class="fa-solid fa-octagon">2</i>
                                     <span class="nub fw-7">ID 1640365</span>
                                 </div>
                                 <div class="topr text-white">
@@ -73,7 +75,7 @@
                             </div>
                             <div class="px-2 d-flex justify-content-between mb-2">
                                 <div class="topl d-flex">
-                                    <div class="star"></div>
+                                    <i class="fa-solid fa-octagon">3</i>
                                     <span class="nub fw-7">ID 1615702</span>
                                 </div>
                                 <div class="topr text-white">
@@ -84,7 +86,7 @@
                             </div>
                             <div class="px-2 d-flex justify-content-between mb-2">
                                 <div class="topl d-flex">
-                                    <div class="star"></div>
+                                    <i class="fa-solid fa-octagon">4</i>
                                     <span class="nub fw-7">ID 1532890</span>
                                 </div>
                                 <div class="topr text-white">
@@ -95,7 +97,7 @@
                             </div>
                             <div class="px-2 d-flex justify-content-between mb-2">
                                 <div class="topl d-flex">
-                                    <div class="star"></div>
+                                    <i class="fa-solid fa-octagon">5</i>
                                     <span class="nub fw-7">ID 1556165</span>
                                 </div>
                                 <div class="topr text-white">
@@ -483,3 +485,4 @@
         </div>
     </div>
 </div>
+@endsection

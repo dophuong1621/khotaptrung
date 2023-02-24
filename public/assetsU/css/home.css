@@ -7,6 +7,7 @@
     left: 0;
     overflow: auto;
     margin: 0;
+    background-color: rgba(0,0,0,0.4);
 }
 
 .tw-transaction .el-dialog {
@@ -312,6 +313,10 @@ ul{
     border-radius: 0.25rem;
 }
 
+.br-05{
+    border-radius: 0.5rem;
+}
+
 .border-bot-w{
     border-bottom: 1px solid #E5E5E5;
 }
@@ -346,6 +351,24 @@ ul{
 .bor-w-1{
     border-width: 1px;
 }
+
+.w-25r{
+    width: 2.5rem;
+}
+
+.w-15r{
+    width: 1.5rem;
+}
+
+.pl-075{
+    padding-left: 0.75rem;
+}
+
+.pr-2{
+    padding-right: 2rem;
+}
+
+
 
 .h-25r{
     height: 2.5rem;

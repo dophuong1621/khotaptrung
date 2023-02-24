@@ -1,4 +1,4 @@
-@extends('layouts_user.home')
+@extends('users.layouts_user.home')
 @section('content')
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
