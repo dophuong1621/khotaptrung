@@ -28,7 +28,6 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
 </head>
 
 <body>
@@ -36,10 +35,8 @@
         {{-- navbar --}}
         @include('users.layouts_user.header')
         {{-- content --}}
-        {{-- @yield('content') --}}
+        @yield('content')
         {{-- @include('users.trang-chu') --}}
-        {{-- @include('users.history.service') --}}
-        @include('users.modal')
         {{-- footer --}}
         @include('users.layouts_user.footer')
     </div>

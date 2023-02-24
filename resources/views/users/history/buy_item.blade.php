@@ -1,6 +1,5 @@
-{{-- @extends('layouts_user.home')
-@section('content') --}}
-
+@extends('layouts_user.home')
+@section('content')
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
@@ -35,4 +34,4 @@
         </div>
     </div>
 </div>
-{{-- @endsection --}}
+@endsection

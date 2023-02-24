@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Bus\ItemController;
 use App\Http\Controllers\Bus\CategoryController;
+use App\Http\Controllers\ManagerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,19 @@ use App\Http\Controllers\Bus\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('users/home');
-});
+Route::get('/', [ManagerController::class, 'home'])->name('home');
+
+Route::GET('recharge', [ManagerController::class, 'recharge'])->name('recharge');
+Route::GET('repassword', [ManagerController::class, 'repass'])->name('repass');
+Route::GET('info', [ManagerController::class, 'info'])->name('info');
+Route::GET('notification', [ManagerController::class, 'notification'])->name('notification');
+Route::GET('withdraw-items', [ManagerController::class, 'withdrawItems'])->name('withdrawItems');
+Route::GET('voucher', [ManagerController::class, 'voucher'])->name('voucher');
+Route::GET('history/game', [ManagerController::class, 'historyGame'])->name('historyGame');
+Route::GET('history/add_card', [ManagerController::class, 'historyAddCard'])->name('historyAddCard');
+Route::GET('history/transaction', [ManagerController::class, 'historyTransaction'])->name('historyTransaction');
+Route::GET('history/items', [ManagerController::class, 'historyItems'])->name('historyItems');
+Route::GET('history/service', [ManagerController::class, 'historyService'])->name('historyService');
 
 //bus
 Route::resource('bus-item', ItemController::class);

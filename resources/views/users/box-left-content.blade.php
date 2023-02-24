@@ -1,4 +1,3 @@
-
 <div class="d-block ct-l">
     <div class="px-0 py-0 w-100 position-sticky ct-l-2" style="z-index: 200;">
         <div class="pb-2 pe-2 gap-2 menu-ava d-grid">
@@ -26,8 +25,8 @@
                     <span class="d-block ml-225">Tài khoản</span>
                 </div>
                 <div class="fw-6 text-sm ml-275 mt-1">
-                    <ul><a href="/myaccount/profile" class="py-1 d-block t-color-black">Thông tin chung
-                        </a> <a href="/myaccount/profile/password" class="py-1 d-block t-color-black">Đổi mật
+                    <ul><a href="/info" class="py-1 d-block t-color-black">Thông tin chung
+                        </a> <a href="/repassword" class="py-1 d-block t-color-black">Đổi mật
                             khẩu</a>
                     </ul>
                 </div>
@@ -40,7 +39,7 @@
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/myaccount/notification" class="t-color-black py-1 d-block">Tất cả thông báo
+                    <ul><a href="/notification" class="t-color-black py-1 d-block">Tất cả thông báo
                         </a></ul>
                 </div>
             </div>
@@ -52,7 +51,7 @@
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/myaccount/game/withdraw" class="t-color-black py-1 d-block">Rút vật phẩm</a>
+                    <ul><a href="/withdraw-items" class="t-color-black py-1 d-block">Rút vật phẩm</a>
                     </ul>
                 </div>
             </div>
@@ -60,14 +59,15 @@
                 <div class="position-relative fw-6">
                     <span
                         class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: -2px;"><i class="fa fa-credit-card"></i></span> <span class="ml-25 d-block">Giao dịch
+                        style="top: -2px;"><i class="fa fa-credit-card"></i></span> <span class="ml-25 d-block">Giao
+                        dịch
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
                     <ul>
-                        <a href="/myaccount/transaction/recharge" class="t-color-black py-1 d-block">Nạp
+                        <a href="/recharge" class="t-color-black py-1 d-block">Nạp
                             thẻ cào tự động</a>
-                        <a class="t-color-black py-1 d-block">Nạp qua
+                        <a class="t-color-black py-1 d-block load-atm">Nạp qua
                             ATM/MOMO</a>
                     </ul>
                 </div>
@@ -77,25 +77,27 @@
                     <span
                         class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
                         style="top: px;"><i class="fa fa-tag"></i></span> <span class="ml-25 d-block">Voucher
-                    </span></div>
+                    </span>
+                </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/myaccount/voucher" class="t-color-black py-1 d-block">Danh sách voucher</a>
+                    <ul><a href="/voucher" class="t-color-black py-1 d-block">Danh sách voucher</a>
                     </ul>
                 </div>
             </div>
             <div class="mb-075">
                 <div class="position-relative fw-6"><span
                         class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: px;"><i class="fa-sharp fa-solid fa-clipboard"></i></span> <span class="ml-25 d-block">Lịch
+                        style="top: px;"><i class="fa-sharp fa-solid fa-clipboard"></i></span> <span
+                        class="ml-25 d-block">Lịch
                         sử</span></div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="#" class="t-color-black py-1 d-block">Chơi game</a> <a href="#"
-                            class="t-color-black py-1 d-block">Nạp thẻ</a> <a href="#"
-                            class="t-color-black py-1 d-block">Giao dịch</a> <a href="#"
-                            class="t-color-black py-1 d-block">Mua tài khoản (nick)</a> <a href="#"
-                            class="t-color-black py-1 d-block">Mua hòm v.phẩm</a> <a href="#"
-                            class="t-color-black py-1 d-block">Mua vật phẩm (Dịch
-                            vụ)</a></ul>
+                    <ul><a href="/history/game" class="t-color-black py-1 d-block">Chơi game</a>
+                        <a href="/history/add_card" class="t-color-black py-1 d-block">Nạp thẻ</a>
+                        <a href="/history/transaction" class="t-color-black py-1 d-block">Giao dịch</a>
+                        <a href="/history/buy_nick" class="t-color-black py-1 d-block">Mua tài khoản (nick)</a>
+                        <a href="/history/buy_item" class="t-color-black py-1 d-block">Mua hòm v.phẩm</a>
+                        <a href="/history/service" class="t-color-black py-1 d-block">Mua vật phẩm (Dịch vụ)</a>
+                    </ul>
                 </div>
             </div>
         </div>
