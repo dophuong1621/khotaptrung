@@ -105,6 +105,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="border-b"></div>
                         <div class="ntt">
                             <span class="t-skh pt-1 pb-1 ps-2 pe-2">Sắp tới sẽ có <b class="skh">sự kiện hot,</b> hãy
                                 chờ nhé!!!</span>

@@ -113,6 +113,10 @@ header {
     background-color: #FFF;
     height: 65px;
     border-bottom-width: 1px;
+    position: sticky;
+    top: 0;
+    transition: top linear .3s;
+    z-index: 10000;
 }
 
 .fa-user {
@@ -131,6 +135,7 @@ header {
 .t-btn-login {
     margin-left: 0.5rem;
 }
+
 
 
 /* Reponsive */
