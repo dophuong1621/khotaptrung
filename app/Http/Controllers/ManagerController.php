@@ -9,7 +9,7 @@ class ManagerController extends Controller
 
     public function home()
     {
-        return view('users.layouts_user.home');
+        return view('users.trang-chu');
     }
 
     public function recharge()

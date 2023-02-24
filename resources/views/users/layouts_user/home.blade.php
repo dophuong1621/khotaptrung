@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KHOTAPTRUNG</title>
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/2e687b4c2d.css" crossorigin="anonymous">
+
     <link href="{{ asset('assetsU') }}/css/home.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/header.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/footer.css" rel="stylesheet" type="text/css">
@@ -28,6 +30,7 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -36,7 +39,7 @@
         @include('users.layouts_user.header')
         {{-- content --}}
         @yield('content')
-        {{-- @include('users.trang-chu') --}}
+        @include('users.modal')
         {{-- footer --}}
         @include('users.layouts_user.footer')
     </div>
@@ -51,7 +54,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assetsU/js/home.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 
 </html>

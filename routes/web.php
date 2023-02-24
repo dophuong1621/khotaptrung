@@ -27,7 +27,7 @@ Route::GET('voucher', [ManagerController::class, 'voucher'])->name('voucher');
 Route::GET('history/game', [ManagerController::class, 'historyGame'])->name('historyGame');
 Route::GET('history/add_card', [ManagerController::class, 'historyAddCard'])->name('historyAddCard');
 Route::GET('history/transaction', [ManagerController::class, 'historyTransaction'])->name('historyTransaction');
-Route::GET('history/items', [ManagerController::class, 'historyItems'])->name('historyItems');
+Route::GET('history/buy_items', [ManagerController::class, 'historyItems'])->name('historyItems');
 Route::GET('history/service', [ManagerController::class, 'historyService'])->name('historyService');
 
 //bus

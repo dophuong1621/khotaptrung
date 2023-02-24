@@ -1,3 +1,5 @@
+@extends('users.layouts_user.home')
+@section('content')
 <div class="d-block ct-l">
     <div class="px-0 py-0 w-100 position-sticky ct-l-2" style="z-index: 200;">
         <div class="pb-2 pe-2 gap-2 menu-ava d-grid">
@@ -103,3 +105,4 @@
         </div>
     </div>
 </div>
+@endsection
