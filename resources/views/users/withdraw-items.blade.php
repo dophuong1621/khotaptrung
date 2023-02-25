@@ -3,12 +3,13 @@
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
+        @include('users.btn-menu')
         <div class="gc-8 gc-12i">
             <h2 class="fw-7 text-xl mb-2">RÚT VẬT PHẨM (GAME)</h2>
             <div class="grid-temp-col-12 d-grid mb-3 bg-box">
                 <button class="fw-8 text-white py-2 border-bot-w-red gc-4 position-relative rut-robux">
                     <span>Rút
-                        <span class="d-sm-inline-block d-none">Robux</span><span class="d--sm-none">RB</span></span>
+                        <span class="d-sm-inline-block d-none">Robux</span><span class="d-sm-none">RB</span></span>
                     <p class="text-sm fw-6 rb">(Robux)</p>
                 </button>
             </div>

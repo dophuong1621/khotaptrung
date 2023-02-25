@@ -3,6 +3,7 @@
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
+        @include('users.btn-menu')
         <div class="gc-8 gc-12i">
             <div class="px-125 py-sm-3 br-025 w-100 mb-3 bg-box p-1r">
                 <div class="pb-2 border-bot-w mb-3">

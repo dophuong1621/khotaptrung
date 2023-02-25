@@ -3,6 +3,7 @@
     <div>
         <div class="px-2 gap-2 ct d-grid mx-auto">
             @include('users.box-left-content')
+            @include('users.btn-menu')
             <div class="gc-8 gc-12i">
                 <div class="gap-3 d-grid grid-temp-col-12">
                     <div class="d-sm-none gc-12 d-block">
@@ -13,8 +14,7 @@
                             <div class="gc-9 d-flex align-items-center">
                                 <div class="ms-2">
                                     <p><b>ID:</b> 1650845</p>
-                                    <p class="text-base"><b>Số dư:</b> <span
-                                            class="t-color fw-7">0đ</span>
+                                    <p class="text-base"><b>Số dư:</b> <span class="t-color fw-7">0đ</span>
                                     </p>
                                 </div>
                             </div>

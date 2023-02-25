@@ -3,6 +3,7 @@
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
+        @include('users.btn-menu')
         <div class="gc-8 gc-12i">
             <div class="grid-temp-col-12 bg-box gap-3 d-grid">
                 <div class="gc-12">

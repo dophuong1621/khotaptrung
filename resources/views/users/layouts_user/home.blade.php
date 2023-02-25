@@ -7,18 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KHOTAPTRUNG</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://kit.fontawesome.com/2e687b4c2d.css" crossorigin="anonymous">
-
     <link href="{{ asset('assetsU') }}/css/home.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/header.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/footer.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/trang-chu.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/box-right-content.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assetsU') }}/css/modal.css" rel="stylesheet" type="text/css">
     {{-- <link href="{{ asset('assetsU') }}/css/recharge.css" rel="stylesheet" type="text/css"> --}}
     {{-- <link href="{{ asset('assetsU') }}/css/withdraw-items.css" rel="stylesheet" type="text/css"> --}}
     {{-- <link href="{{ asset('assetsU') }}/css/list-voucher.css" rel="stylesheet" type="text/css"> --}}
     {{-- <link href="{{ asset('assetsU') }}/css/history.css" rel="stylesheet" type="text/css"> --}}
-    <link href="{{ asset('assetsU') }}/css/modal.css" rel="stylesheet" type="text/css">
     {{-- select2 --}}
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     {{-- -- --}}

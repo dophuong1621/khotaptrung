@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     close.click(function () {
         modal.hide();
+        $('.btn-menu-left').css({'display': 'none'});
     });
 
     $(window).on('click', function (e) {
@@ -45,5 +46,17 @@ $(document).ready(function () {
     // dropdown
     $('.btn-inf').click(function(){
         $('.dropdown').toggle('d-block');
+    });
+
+    //btn-menu
+    $('.menu').click(function(){
+        $('.btn-menu-left').show();
+        $('.btn-menu-left').css({'display': 'block'});
+    })
+
+    $(window).on('click', function (e) {
+        if ($(e.target).is('.modal-menu')) {
+            $('.btn-menu-left').css({'display': 'none'});
+        }
     });
 });

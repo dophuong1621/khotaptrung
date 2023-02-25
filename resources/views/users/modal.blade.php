@@ -1,3 +1,4 @@
+{{-- popup atm --}}
 <div class="load-atm" style="display: none">
     <div class="modal-atm" style="z-index: 100001">
         <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog tw-dialog-trans"
@@ -12,10 +13,12 @@
             <div class="el-dialog__body">
                 <div class="my-3" style="word-break: break-word;">
                     <div class="d-grid grid-temp-col-12 gap-3">
-                        <div class="gc-6"><button class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
+                        <div class="gc-6 gc-12i"><button
+                                class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
                                     class="w-15 lazyLoad isLoaded" src="/assetsU/image/bank.png"> <span
                                     class="ml-05 fw-6">Ngân Hàng (ATM)</span></button></div>
-                        <div class="gc-6"><button class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
+                        <div class="gc-6 gc-12i"><button
+                                class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
                                     class="w-15 lazyLoad isLoaded" src="/assetsU/image/momo.png"> <span
                                     class="ml-05 fw-6">Ứng dụng MOMO</span></button></div>
                     </div>
@@ -41,13 +44,12 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="box-40">
                                     <div class="w-100 position-relative">
-                                        <label
-                                            class="d-inline-block position-absolute text-xs fw-5"
+                                        <label class="d-inline-block position-absolute text-xs fw-5"
                                             style="left: 10px; top: 6px;">
                                             Số tiền bạn chuyển
                                         </label>
                                         <input type="number" placeholder=""
-                                            class="focus:tw-outline-none tw-pt-3 tw-px-2 h-3r tw-rounded border-w-2-gray w-100 tw-text-sm tw-font-semibold tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
+                                            class="focus:tw-outline-none tw-pt-3 tw-px-2 h-3r tw-rounded border-w-2-gray w-100 text-sm fw-6 tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
                                     </div>
                                     <span class="mt-1 position-absolute text-xs d-block fw-6"><i
                                             class="position-relative fw-5 bx bx-subdirectory-right"
@@ -61,7 +63,7 @@
                                             style="left: 10px; top: 6px;">
                                             Tiền nhận trên shop
                                         </label> <input readonly="readonly" placeholder=""
-                                            class="focus:tw-outline-none tw-pt-3 tw-px-2 h-3r tw-rounded border-w-2-gray w-100 tw-text-sm tw-font-semibold tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
+                                            class="focus:tw-outline-none tw-pt-3 tw-px-2 h-3r tw-rounded border-w-2-gray w-100 text-sm fw-6 tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
                                     </div>
                                 </div>
                             </div>
@@ -72,6 +74,125 @@
                 <!---->
             </div>
             <!---->
+        </div>
+    </div>
+</div>
+
+{{-- btn-menu  --}}
+<div class="btn-menu-left" style="z-index: 10000;display:none">
+    <div class="modal-menu el-drawer__open">
+        <div class="modal-contentt ltr" style="width:280px;">
+            <header id="btn-menu-title" class="btn-menu-header">
+                <div>
+                    <b>DANH MỤC MENU</b>
+                </div>
+                <button type="button" class="btn-close-menu">
+                    <i class="btn-close btn-close-black"></i>
+                </button>
+            </header>
+            <section class="btn-menu-body">
+                <div style="max-height: 95vh; overflow: hidden auto;">
+                    <div class="w-100 padding-05r position-sticky " style="z-index: 200;top: 5rem">
+                        <div class="d-grid grid-temp-col-12 gap-2 pe-2 pb-2">
+                            <div class="gc-3 d-flex align-items-center">
+                                <img class="w-100 br-9999 border-w-1" src="/assetsU/image/unknown-avatar.jpg">
+                            </div>
+                            <div class="gc-9">
+                                <p class="d-flex align-items-center">
+                                    <b class="me-1">ID:</b> 1650845
+                                    <span
+                                        class="w-1 h-1 d-flex align-items-center justify-content-center ms-2 cursor-pointer"><i
+                                            class="bx bxs-copy"></i>
+                                    </span>
+                                </p>
+                                <p class="text-sm"><b>Số dư:</b> <span class="t-color fw-7">0đ</span></p>
+                                <p class="text-sm"><b>Xu:</b> <span class="t-color fw-7">0xu</span></p>
+                            </div>
+                        </div>
+                        <div class="mb-3 bor-w75-gray"></div>
+                        <div>
+                            <div class="mb-075">
+                                <div class="position-relative fw-6"><span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
+                                        style="top: -2px;"><i class="text-lg bx bxs-user "></i></span> <span
+                                        class="ml-25r d-block">Tài khoản
+                                    </span></div>
+                                <div class="ml-275 mt-1 text-sm fw-6">
+                                    <ul><a href="/info" class="d-block py-1 text-black ">Thông tin chung
+                                        </a> <a href="/repassword" class="d-block py-1 text-black">Đổi mật khẩu</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-075">
+                                <div class="position-relative fw-6"><span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
+                                        style="top: -2px;"><i class="text-lg bx bxs-bell"></i></span> <span
+                                        class="ml-25r d-block">Thông báo
+                                    </span></div>
+                                <div class="ml-275 mt-1 text-sm fw-6">
+                                    <ul><a href="/notification" class="d-block py-1 text-black">Tất cả thông báo
+                                        </a></ul>
+                                </div>
+                            </div>
+                            <div class="mb-075">
+                                <div class="position-relative fw-6"><span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
+                                        style="top: -2px;"><i class="text-lg bx bxs-game"></i></span> <span
+                                        class="ml-25r d-block">Trò chơi
+                                    </span></div>
+                                <div class="ml-275 mt-1 text-sm fw-6">
+                                    <ul><a href="/withdraw-items" class="d-block py-1 text-black">Rút vật phẩm</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-075">
+                                <div class="position-relative fw-6"><span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
+                                        style="top: -2px;"><i class="text-lg bx bxs-wallet-alt"></i></span> <span
+                                        class="ml-25r d-block">Giao dịch
+                                    </span></div>
+                                <div class="ml-275 mt-1 text-sm fw-6">
+                                    <ul>
+                                        <a href="/recharge" class="d-block py-1 text-black">Nạp
+                                            thẻ cào tự động</a>
+                                        <a class="cursor-pointer d-block py-1 text-black atm">Nạp qua
+                                            ATM/MOMO</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-075">
+                                <div class="position-relative fw-6"><span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
+                                        style="top: -2px;"><i class="text-lg bx bxs-purchase-tag-alt"></i></span>
+                                    <span class="ml-25r d-block">Voucher
+                                    </span>
+                                </div>
+                                <div class="ml-275 mt-1 text-sm fw-6">
+                                    <ul><a href="/voucher" class="d-block py-1 text-black">Danh sách voucher</a></ul>
+                                </div>
+                            </div>
+                            <div class="mb-075">
+                                <div class="position-relative fw-6"><span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
+                                        style="top: -2px;"><i class="text-lg bx bxs-notepad"></i></span> <span
+                                        class="ml-25r d-block">Lịch sử</span></div>
+                                <div class="ml-275 mt-1 text-sm fw-6">
+                                    <ul><a href="/history/game" class="d-block py-1 text-black">Chơi game</a> <a
+                                            href="/history/add_card" class="d-block py-1 text-black">Nạp thẻ</a> <a
+                                            href="/history/transaction" class="d-block py-1 text-black">Giao dịch</a>
+                                        <a href="/history/buy_nick" class="d-block py-1 text-black">Mua tài khoản
+                                            (nick)</a>
+                                        <a href="/history/buy_items" class="d-block py-1 text-black">Mua hòm
+                                            v.phẩm</a> <a href="/history/service" class="d-block py-1 text-black">Mua
+                                            vật phẩm (Dịch
+                                            vụ)</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </div>

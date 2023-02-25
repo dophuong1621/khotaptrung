@@ -21,7 +21,7 @@
 }
 
 .bg-box-gray {
-    background-color: #D4D4D4 ;
+    background-color: #D4D4D4;
 }
 
 .box {
@@ -67,7 +67,7 @@
     padding: 1rem 0.5rem;
     gap: 1rem;
     display: grid;
-    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .ct-box {
@@ -108,6 +108,9 @@
     line-height: 1rem;
     margin-top: 0.25rem;
     color: #000;
+}
+
+.mb-025 {
     margin-bottom: 0.25rem;
 }
 
@@ -203,8 +206,6 @@
 .t-sk {
     background: #D4D4D4;
     border: 0px;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
 }
 
 .sk-new {
@@ -265,7 +266,7 @@
     height: 40px;
 }
 
-.in-1{
+.in-1 {
     z-index: 1;
 }
 
@@ -315,26 +316,114 @@
 
 .border-b {
     width: 66.66667%;
-    border-top: 1px solid #000;
+    border-top: 1px solid #e5e5e5;
+}
+
+.topl-ic {
+    position: relative;
+    height: 30px;
+}
+
+.topl-nub {
+    position: absolute;
+    color: #fff;
+    left: 7px;
+    top: 5px;
+}
+
+.bi-octagon-fill {
+    font-size: 23px;
+}
+
+.top1 {
+    color: #DC2626;
+}
+
+.top2 {
+    color: #3B82F6;
+}
+
+.top3 {
+    color: #EAB308;
+}
+
+.top4 {
+    color: #14B8A6;
+}
+
+.nub-top {
+    position: absolute;
+    left: 7px;
+    font-size: 16px;
+    top: 6px;
+}
+
+.nt-top {
+    max-height: 10.9rem;
+}
+
+.w-8r {
+    width: 8rem;
+}
+
+.h-275{
+    height: 2.75rem;
+}
+
+.rounded-r-full{
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
 }
 
 /* Reponsive */
+@media screen and (max-width: 769px) {
+    .t-skh {
+        font-size: 0.9rem;
+    }
+
+    .img-h {
+        height: 20rem;
+    }
+
+    .box1 {
+        margin-bottom: 1rem;
+    }
+}
+
 @media screen and (max-width: 415px) {
 
     .box1 {
+        margin-bottom: 1rem !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         gap: 0.5rem;
-        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        display: grid !important;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        height: 600px;
+    }
+
+    .sk-new{
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 
     .img-home {
         width: 100% !important;
+        grid-column: span 12/span 12;
+    }
+
+    .bxh-home {
+        width: 100% !important;
+        grid-column: span 12/span 12;
     }
 
     .img-h {
         height: 12rem;
     }
 
-    .ct-box{
+    .ct-box {
         grid-column: span 6/span 6;
     }
 }

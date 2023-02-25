@@ -17,7 +17,8 @@
 
                         NẠP THẺ
                     </a>
-                    <a class="atm d-none d-sm-flex ml-05r fw-7 px-075 text-sm align-items-center cursor-pointer t-color">
+                    <a
+                        class="atm d-none d-sm-flex ml-05r fw-7 px-075 text-sm align-items-center cursor-pointer t-color">
                         <span
                             class="d-inline-flex align-items-center justify-content-center h-15r w-175r br-025 ic-color me-2 bg-color">
                             <i class="text-lg bx bx-credit-card-front"></i></span>
@@ -45,14 +46,7 @@
                     </a>
                     <div class="">
                         <span>
-                            <div role="tooltip" id="el-popover-1422" aria-hidden="true"
-                                class="el-popover el-popper dropmenu dropdown"
-                                style="display:none;width:290px;transform-origin: center top;
-                                z-index: 2007;
-                                position: absolute;
-                                top: 64px;
-                                left: 1113px;"
-                                tabindex="0">
+                            <div role="tooltip" class="el-popover el-popper dropmenu dropdown">
                                 <!---->
                                 <div>
                                     <div class="border-bot-w d-grid grid-temp-col-12 gap-2 padding-05r">

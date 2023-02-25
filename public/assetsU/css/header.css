@@ -56,6 +56,10 @@
     color: #D61B10;
 }
 
+.t-color:hover {
+    color: #e5726c;
+}
+
 .btn-login {
     height: 2.5rem;
     font-weight: 600;
@@ -97,7 +101,7 @@ header {
     margin-left: 0.25rem;
 }
 
-.h-img2{
+.h-img2 {
     left: 0px;
 }
 
@@ -114,7 +118,7 @@ header {
     top: 0.625rem;
 }
 
-.pr-2{
+.pr-2 {
     padding-right: 2rem;
 }
 
@@ -123,7 +127,14 @@ header {
 }
 
 .dropmenu {
-    padding: 5px!important;
+    padding: 5px !important;
+    display: none;
+    width: 290px !important;
+    transform-origin: center top !important;
+    z-index: 2007 !important;
+    position: absolute !important;
+    top: 64px;
+    left: 1113px;
 }
 
 .el-popover {
@@ -148,9 +159,17 @@ header {
     .t-btn-login {
         margin-left: 0.5rem;
     }
+    .dropmenu{
+        left: 473px;
+    }
 }
 
 @media screen and (max-width: 418px) {
+    .dropmenu{
+        top: 55px;
+        left: 119px;
+    }
+
     .nt,
     .atm {
         display: none;
