@@ -79,7 +79,7 @@
 </div>
 
 {{-- btn-menu  --}}
-<div class="btn-menu-left" style="z-index: 10000;display:none">
+<div class="btn-menu-left" style="z-index: 1001;display:none">
     <div class="modal-menu el-drawer__open">
         <div class="modal-contentt ltr" style="width:280px;">
             <header id="btn-menu-title" class="btn-menu-header">
@@ -193,6 +193,68 @@
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
+</div>
+
+{{-- popup-login  --}}
+<div class="popup-login" style="z-index: 1002;">
+    <div role="dialog" aria-modal="true" aria-label="dialog" class="modal-home" style="margin-top:15vh;">
+        <div class="tb-login">
+            <div class="t-color fw-7">
+                <i class="position-relative bx bxs-bell-ring text-xl" style="top:3px;"></i>
+                THÔNG BÁO
+            </div>
+            <button type="button" aria-label="Close" class="el-dialog__headerbtn">
+                <i class="btn-close btn-close-black"></i>
+            </button>
+        </div>
+        <div class="ct-login">
+            <div class="main-ct" style="word-break: break-word;">
+                <p style="margin-left: 0px; text-align: center;">
+                    <span class="text-big" style="color: rgb(2, 132, 199);">
+                        <strong>Hiện Tại Robux tại shop Hiha đã có hàng - Độc Quyền
+                            thị trường</strong>
+                    </span>
+                </p>
+                <p style="margin-left: 0px; text-align: center;">
+                    <span class="text-big"
+                        style="background-color: rgb(255, 255, 255); color: rgb(185, 28, 28);"><strong>10k = 85
+                            Robux</strong>
+                    </span>
+                </p>
+                <p style="margin-left: 0px; text-align: center;">
+                    <span class="text-big" style="color: rgb(2, 132, 199);">
+                        <strong>Mọi người nhanh tay mua nhé - Đơn sẽ được xử lý sớm
+                            nhất</strong>
+                    </span>
+                </p>
+                <p style="margin-left: 0px; text-align: center;">
+                    <span class="text-big" style="color: rgb(2, 132, 199);">
+                        <strong>Sau khi nguồn Robux ổn định sẽ quay về giá
+                            cũ.</strong>
+                    </span>
+                </p>
+                <p style="margin-left: 0px; text-align: center;">
+                    <span style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);">🥇</span>
+                    <span style="background-color: rgb(255, 255, 255); color: rgb(39, 39, 42);">
+                        <strong>HOT :
+                        </strong>
+                    </span>
+                    <span style="background-color: rgb(255, 255, 255); color: rgb(244, 63, 94);">
+                        <strong>TẶNG MIỄN PHÍ
+                            NGẪU NHIÊN ROBUX VÀ TRÁI ÁC QUỶ XỊN KHI TẠO TÀI KHOẢN Ở SHOP</strong>
+                    </span>
+                    <span style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);">🥇</span>
+                </p>
+            </div>
+        </div>
+        <div class="footer-login">
+            <span class="dialog-footer">
+                <button type="button" class="ttb">
+                    <span>Tắt thông báo </span>
+                </button>
+            </span>
         </div>
     </div>
 </div>
