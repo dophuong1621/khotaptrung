@@ -203,6 +203,7 @@ th {
     text-align: inherit;
     text-align: -webkit-match-parent;
 }
+
 /*
 .content {
     background: #000000;
@@ -310,6 +311,18 @@ ul{
 
 .gc-3{
     grid-column: span 3/span 3;
+}
+
+.gc-2{
+    grid-column: span 2/span 2;
+}
+
+.ml-25r{
+    margin-left: 2.5rem;
+}
+
+.ml-05r{
+    margin-left: 0.5rem;
 }
 
 .px-125{
@@ -435,4 +448,12 @@ ul{
 
 .h-3r{
     height: 3rem;
+}
+
+.h-15r{
+    height: 1.5rem;
+}
+
+.w-175r{
+    width: 1.75rem;
 }

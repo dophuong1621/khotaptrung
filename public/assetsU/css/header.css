@@ -44,23 +44,6 @@
     width: 100%;
 }
 
-.t-hoa {
-    text-transform: uppercase;
-}
-
-.nt {
-    display: flex;
-    font-weight: 700;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.25rem;
-    margin-left: 2.5rem;
-    width: 9rem;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
 .atm {
     display: flex;
     font-size: .875rem;
@@ -71,19 +54,6 @@
 
 .ic-color {
     color: #D61B10;
-    width: 28px;
-    height: 24px;
-    border-radius: 0.25rem;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0.5rem;
-    display: inline-flex !important;
-}
-
-.nt-ic {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    font-size: 16px;
 }
 
 .btn-login {
@@ -146,6 +116,30 @@ header {
 
 .pr-2{
     padding-right: 2rem;
+}
+
+.el-popper[x-placement^=bottom] {
+    margin-top: 12px;
+}
+
+.dropmenu {
+    padding: 5px!important;
+}
+
+.el-popover {
+    position: absolute;
+    background: #fff;
+    min-width: 150px;
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    padding: 12px;
+    z-index: 2000;
+    color: #606266;
+    line-height: 1.4;
+    text-align: justify;
+    font-size: 14px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    word-break: break-all;
 }
 
 

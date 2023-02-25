@@ -9,15 +9,19 @@
                         <img src="https://cdns.diongame.com/static/image-49572b34-c8b0-40df-8d04-13c44741d328.png"
                             class="h-img2">
                     </a>
-                    <a href="#" class="nt">
-                        <span class="nt-ic"><i class='fa fa-dollar bg-color ic-color'></i></span>
-                        <span class="nt-t t-hoa t-color">Nạp thẻ</span>
+                    <a href="recharge"
+                        class="d-none d-sm-flex ml-25r fw-7 px-075 text-sm align-items-center cursor-pointer t-color">
+                        <span
+                            class="d-inline-flex align-items-center justify-content-center h-15r w-175r br-025 ic-color me-2 bg-color">
+                            <i class="text-lg bx bx-dollar"></i></span>
+
+                        NẠP THẺ
                     </a>
-                    <a href="#" class="atm fw-7">
-                        <span class="atm-ic">
-                            <i class="fa fa-credit-card bg-color ic-color"></i>
-                            <span class="atm-t t-hoa t-color">Nạp ATM/MOMO</span>
-                        </span>
+                    <a class="atm d-none d-sm-flex ml-05r fw-7 px-075 text-sm align-items-center cursor-pointer t-color">
+                        <span
+                            class="d-inline-flex align-items-center justify-content-center h-15r w-175r br-025 ic-color me-2 bg-color">
+                            <i class="text-lg bx bx-credit-card-front"></i></span>
+                        NẠP ATM/MOMO
                     </a>
                 </div>
                 {{-- <div class="h-right d-flex none">
@@ -25,7 +29,7 @@
                         <span class="ct-btn-login">
                             <span class="ic-btn-login">
                                 <i class="fas fa-user"></i>
-                                <span class="t-btn-login t-hoa">Đăng Nhập</span>
+                                <span class="t-btn-login uppercase">Đăng Nhập</span>
 
                             </span>
 
@@ -39,95 +43,91 @@
                         </i>
                         <!---->
                     </a>
-                    <div>
+                    <div class="">
                         <span>
                             <div role="tooltip" id="el-popover-1422" aria-hidden="true"
-                                class="el-popover el-popper tw-dropmenu" style="width:290px;display:none;"
+                                class="el-popover el-popper dropmenu dropdown"
+                                style="display:none;width:290px;transform-origin: center top;
+                                z-index: 2007;
+                                position: absolute;
+                                top: 64px;
+                                left: 1113px;"
                                 tabindex="0">
                                 <!---->
                                 <div>
-                                    <div class="tw-border-b tw-border-gray-100 tw-grid tw-grid-cols-12 tw-gap-2 tw-p-2">
-                                        <div class="tw-col-span-2 tw-flex tw-items-center tw-justify-content">
-                                            <img src="/assetsU/image/unknown-avatar.jpg" class="tw-w-full tw-rounded-lg">
+                                    <div class="border-bot-w d-grid grid-temp-col-12 gap-2 padding-05r">
+                                        <div class="gc-2 d-flex align-items-center">
+                                            <img src="/assetsU/image/unknown-avatar.jpg" class="w-100 br-05">
                                         </div>
-                                        <div class="tw-col-span-9">
+                                        <div class="gc-9">
                                             <p><b>ID:</b> 1650845</p>
-                                            <p><b>Số dư:</b> <span class="tw-text-red-600 tw-font-bold">0đ</span></p>
-                                            <p><b>Xu khóa:</b> <span class="tw-text-red-600 tw-font-bold">0xu</span></p>
+                                            <p><b>Số dư:</b> <span class="t-color fw-7">0đ</span></p>
+                                            <p><b>Xu khóa:</b> <span class="t-color fw-7">0xu</span></p>
                                         </div>
                                     </div>
-                                    <div class="tw-text-sm">
-                                        <span class="tw-mt-2 tw-text-red-500 tw-font-bold tw-text-sm tw-block tw-px-3">
+                                    <div class="text-sm">
+                                        <span class="mt-2 t-color fw-7 text-sm d-block px-075">
                                             TÀI KHOẢN
                                         </span>
-                                        <div class="tw-px-2">
-                                            <a href="/myaccount/profile"
-                                                class="tw-font-semibold hover:tw-text-gray-800 hover:tw-bg-gray-100 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                        <div class="px-2">
+                                            <a href="/info" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Thông tin chung
                                             </a>
                                         </div>
-                                        <span class="tw-text-red-500 tw-font-bold tw-text-sm tw-my-1 tw-block tw-px-3">
-                                            <i class="tw-relative bx bxs-dollar-circle" style="top:1px;"></i>
+                                        <span class="t-color fw-7 text-sm my-1 d-block px-075">
+                                            <i class="position-relative bx bxs-dollar-circle" style="top:1px;"></i>
                                             NẠP TIỀN
                                         </span>
-                                        <div class="tw-px-2">
-                                            <a href="/recharge"
-                                                class="tw-font-semibold hover:tw-bg-gray-100 hover:tw-text-gray-800 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                        <div class="px-2">
+                                            <a href="/recharge" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Nạp thẻ cào (tự động)
                                             </a>
-                                            <a
-                                                class="tw-font-semibold hover:tw-bg-gray-100 hover:tw-text-gray-800 tw-block tw-py-1 tw-px-3 tw-cursor-pointer atm">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                            <a class="fw-6 d-block py-1 px-075 cursor-pointer atm text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Nạp ATM/MOMO (tự động)
                                             </a>
                                         </div>
-                                        <span class="tw-text-red-500 tw-font-bold tw-text-sm tw-my-1 tw-block tw-px-3">
+                                        <span class="t-color fw-7 text-sm my-1 d-block px-075">
                                             LỊCH SỬ
                                         </span>
-                                        <div class="tw-px-2">
-                                            <a href="/history/game"
-                                                class="tw-font-semibold hover:tw-text-gray-800 hover:tw-bg-gray-100 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                        <div class="px-2">
+                                            <a href="/history/game" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Lịch sử chơi game
                                             </a>
-                                            <a href="/history/buy_nick"
-                                                class="tw-font-semibold hover:tw-text-gray-800 hover:tw-bg-gray-100 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                            <a href="/history/buy_nick" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Lịch sử mua nick
                                             </a>
-                                            <a href="/history/buy_items"
-                                                class="tw-font-semibold hover:tw-text-gray-800 hover:tw-bg-gray-100 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                            <a href="/history/buy_items" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Lịch sử mua v.phẩm
                                             </a>
                                         </div>
-                                        <span class="tw-text-red-500 tw-font-bold tw-text-sm tw-my-1 tw-block tw-px-3">
+                                        <span class="t-color fw-7 text-sm my-1 d-block px-075">
                                             KHÁC
                                         </span>
-                                        <div class="tw-px-2">
-                                            <a href="/voucher"
-                                                class="tw-font-semibold hover:tw-text-gray-800 hover:tw-bg-gray-100 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                        <div class="px-2">
+                                            <a href="/voucher" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Voucher
                                                 <span
-                                                    class="tw-relative tw-text-xs tw-px-2 tw-inline-block tw-rounded tw-bg-red-600 tw-text-white tw-font-medium"
+                                                    class="position-relative text-xs px-2 d-inline-block br-025 tw-bg-red-600 text-white fw-5 dx"
                                                     style="top:-1px;">
                                                     Mới
                                                 </span>
                                             </a>
                                         </div>
-                                        <div class="tw-px-2">
-                                            <a href="/withdraw-items"
-                                                class="tw-font-semibold hover:tw-text-gray-800 hover:tw-bg-gray-100 tw-block tw-py-1 tw-px-3">
-                                                <i class="tw-relative bx bx-chevron-right" style="top:1px;"></i>
+                                        <div class="px-2">
+                                            <a href="/withdraw-items" class="fw-6 d-block py-1 px-075 text-black">
+                                                <i class="position-relative bx bx-chevron-right" style="top:1px;"></i>
                                                 Rút vật phẩm (Robux)
                                             </a>
                                         </div>
-                                        <div class="tw-p-2">
-                                            <button
-                                                class="tw-py-1 tw-rounded tw-text-center tw-bg-red-500 hover:tw-bg-red-600 tw-text-white tw-font-semibold tw-w-full">
+                                        <div class="padding-05r">
+                                            <button class="text-white dx fw-6 text-center py-1 br-025 w-100">
                                                 Đăng xuất
                                             </button>
                                         </div>
@@ -136,13 +136,14 @@
                             </div>
                             <span class="el-popover__reference-wrapper">
                                 <button
-                                    class="pl-075 h-25r text-sm fw-6 br-05 align-items-center d-flex position-relative dx pr-2 h-2r"
+                                    class="pl-075 h-25r text-sm fw-6 br-05 align-items-center d-flex position-relative dx pr-2 h-2r btn-inf"
                                     style="min-width:4rem;" aria-describedby="el-popover-1422" tabindex="0">
                                     <span>
                                         <img src="/assetsU/image/unknown-avatar.jpg"
                                             class="d-none d-sm-block bor-1 w-15r br-05 ">
                                     </span>
-                                    <span class="d-none d-sm-block position-relative ms-1 text-white" style="top:-1px;">|</span>
+                                    <span class="d-none d-sm-block position-relative ms-1 text-white"
+                                        style="top:-1px;">|</span>
                                     <span class="ms-sm-1 fw-7 text-white"> 0đ</span>
                                     <i class="top-down text-lg position-absolute bx bx-caret-down-circle text-white"
                                         style="right:8px;">

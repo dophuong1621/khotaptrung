@@ -41,4 +41,9 @@ $(document).ready(function () {
         $('.nt-ct-h').removeClass('d-none');
         $('.t-ct-h').addClass('d-none');
     });
+
+    // dropdown
+    $('.btn-inf').click(function(){
+        $('.dropdown').toggle('d-block');
+    });
 });
