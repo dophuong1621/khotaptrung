@@ -39,16 +39,16 @@
                     <div class="top-nap pb-1 pe-1 ps-1">
                         <span class="t-top uppercase t-color fw-8">Top Nạp T.2</span>
                         <div class="tc d-flex justify-content-center">
-                            <button class="t-tc uppercase fw-7 bg-box text-white pe-2 ps-2">Thẻ cào</button>
+                            <button class="t-tc uppercase fw-7 text-white pe-2 ps-2">Thẻ cào</button>
                         </div>
                     </div>
-                    <div class="sk-new d-flex">
+                    <div class="sk-new d-flex bg-box-gray">
                         <i class="fa-gift fa gift"></i>
                         <button class="uppercase t-sk fw-8">Sự kiện mới</button>
                     </div>
                 </div>
                 <div class="content-h pt-2 pb-2 bg-box position-relative">
-                    {{-- <div class="t-ct-h d-flex justify-content-center in-1">Chưa có thông báo mới</div> --}}
+                    <div class="t-ct-h d-flex justify-content-center d-none">Chưa có thông báo mới</div>
                     <div class="nt-ct-h">
                         <div class="nt-top overflow-auto mb-3">
                             <div class="px-2 d-flex justify-content-between mb-2">

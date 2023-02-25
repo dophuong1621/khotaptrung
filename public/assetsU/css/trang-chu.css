@@ -17,7 +17,11 @@
 }
 
 .bg-box {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
+}
+
+.bg-box-gray {
+    background-color: #D4D4D4 ;
 }
 
 .box {
@@ -204,7 +208,6 @@
 }
 
 .sk-new {
-    background: #D4D4D4;
     height: 44px;
     width: 50%;
     color: #ea473f;

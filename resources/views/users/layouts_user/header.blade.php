@@ -13,14 +13,14 @@
                         <span class="nt-ic"><i class='fa fa-dollar bg-color ic-color'></i></span>
                         <span class="nt-t t-hoa t-color">Nạp thẻ</span>
                     </a>
-                    <a href="#" class="atm">
+                    <a href="#" class="atm fw-7">
                         <span class="atm-ic">
                             <i class="fa fa-credit-card bg-color ic-color"></i>
                             <span class="atm-t t-hoa t-color">Nạp ATM/MOMO</span>
                         </span>
                     </a>
                 </div>
-                <div class="h-right d-flex none">
+                {{-- <div class="h-right d-flex none">
                     <button class="btn-login bg-color">
                         <span class="ct-btn-login">
                             <span class="ic-btn-login">
@@ -31,10 +31,10 @@
 
                         </span>
                     </button>
-                </div>
+                </div> --}}
                 <div class="d-flex flex-wrap align-items-center">
                     <a href="/notification"
-                        class="h-25r me-3 text-2xl br-05 justify-content-center align-items-center w-25r d-flex position-relative"><i
+                        class="h-25r me-sm-3 text-2xl br-05 justify-content-center align-items-center w-25r d-flex position-relative mr-075"><i
                             class="bx bxs-bell">
                         </i>
                         <!---->
@@ -48,7 +48,7 @@
                                 <div>
                                     <div class="tw-border-b tw-border-gray-100 tw-grid tw-grid-cols-12 tw-gap-2 tw-p-2">
                                         <div class="tw-col-span-2 tw-flex tw-items-center tw-justify-content">
-                                            <img src="/unknown-avatar.jpg" class="tw-w-full tw-rounded-lg">
+                                            <img src="/assetsU/image/unknown-avatar.jpg" class="tw-w-full tw-rounded-lg">
                                         </div>
                                         <div class="tw-col-span-9">
                                             <p><b>ID:</b> 1650845</p>
@@ -136,14 +136,14 @@
                             </div>
                             <span class="el-popover__reference-wrapper">
                                 <button
-                                    class="pl-075 h-25r text-sm fw-6 br-05 align-items-center d-flex position-relative dx pr-2"
+                                    class="pl-075 h-25r text-sm fw-6 br-05 align-items-center d-flex position-relative dx pr-2 h-2r"
                                     style="min-width:4rem;" aria-describedby="el-popover-1422" tabindex="0">
                                     <span>
                                         <img src="/assetsU/image/unknown-avatar.jpg"
-                                            class="none d-sm-block bor-w-1 w-15r br-05 ">
+                                            class="d-none d-sm-block bor-1 w-15r br-05 ">
                                     </span>
                                     <span class="d-none d-sm-block position-relative ms-1 text-white" style="top:-1px;">|</span>
-                                    <span class="ms-1 fw-7 text-white"> 0đ</span>
+                                    <span class="ms-sm-1 fw-7 text-white"> 0đ</span>
                                     <i class="top-down text-lg position-absolute bx bx-caret-down-circle text-white"
                                         style="right:8px;">
                                     </i>

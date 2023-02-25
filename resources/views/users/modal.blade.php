@@ -13,10 +13,10 @@
                 <div class="my-3" style="word-break: break-word;">
                     <div class="d-grid grid-temp-col-12 gap-3">
                         <div class="gc-6"><button class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
-                                    class="w-15 lazyLoad isLoaded" src="assetsU/image/bank.png"> <span
+                                    class="w-15 lazyLoad isLoaded" src="/assetsU/image/bank.png"> <span
                                     class="ml-05 fw-6">Ngân Hàng (ATM)</span></button></div>
                         <div class="gc-6"><button class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
-                                    class="w-15 lazyLoad isLoaded" src="assetsU/image/momo.png"> <span
+                                    class="w-15 lazyLoad isLoaded" src="/assetsU/image/momo.png"> <span
                                     class="ml-05 fw-6">Ứng dụng MOMO</span></button></div>
                     </div>
                     <div>

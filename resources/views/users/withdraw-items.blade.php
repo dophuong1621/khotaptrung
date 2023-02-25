@@ -3,16 +3,16 @@
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
-        <div class="gc-8">
+        <div class="gc-8 gc-12i">
             <h2 class="fw-7 text-xl mb-2">RÚT VẬT PHẨM (GAME)</h2>
             <div class="grid-temp-col-12 d-grid mb-3 bg-box">
                 <button class="fw-8 text-white py-2 border-bot-w-red gc-4 position-relative rut-robux">
                     <span>Rút
-                        <span class="d-inline-block">Robux</span><span class="d-none">RB</span></span>
-                    <p class="text-sm fw-6">(Robux)</p>
+                        <span class="d-sm-inline-block d-none">Robux</span><span class="d--sm-none">RB</span></span>
+                    <p class="text-sm fw-6 rb">(Robux)</p>
                 </button>
             </div>
-            <div class="bg-box px-125 py-3 br-025 w-100 mb-3">
+            <div class="bg-box px-125 py-sm-3 br-025 w-100 mb-3 p-05r">
                 <div class="tw-form-withdraw">
                     <div>
                         <div class="fw-7 pb-2 border-bot-w mb-2">
@@ -23,8 +23,8 @@
                             </b>
                         </div>
                         <div class="gap-3 grid-temp-col-12 d-grid">
-                            <div class="gc-6">
-                                <form class="px-0">
+                            <div class="gc-6 gc-12i">
+                                <form class="px-sm-0 px-2">
                                     <div class="mb-3"><label class="fw-6 text-sm d-block mb-2"><b>Bước
                                                 1:</b> Chọn hình thức rút vật phẩm
                                         </label>

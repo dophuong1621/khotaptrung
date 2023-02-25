@@ -19,4 +19,26 @@ $(document).ready(function () {
             modal.hide();
         }
     });
+
+    // bxh
+    var sk = $('.sk-new');
+    var tn = $('.top-nap');
+
+    sk.click(function(){
+        sk.addClass('bg-box');
+        $('.t-sk').addClass('bg-box t-color');
+        tn.addClass('bg-box-gray');
+        $('.t-top').addClass('text-black');
+        $('.nt-ct-h').addClass('d-none');
+        $('.t-ct-h').removeClass('d-none');
+    });
+
+    tn.click(function(){
+        sk.removeClass('bg-box');
+        $('.t-sk').removeClass('bg-box t-color');
+        tn.removeClass('bg-box-gray');
+        $('.t-top').removeClass('text-black');
+        $('.nt-ct-h').removeClass('d-none');
+        $('.t-ct-h').addClass('d-none');
+    });
 });

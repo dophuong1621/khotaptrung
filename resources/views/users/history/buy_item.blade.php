@@ -3,9 +3,9 @@
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
-        <div class="gc-8">
-            <div class="bg-box py-3 px-125 w-100 br-025">
-                <div class="mb-3 pb-2 border-bot-w">
+        <div class="gc-8 gc-12i">
+            <div class="bg-box py-sm-3 px-125 w-100 br-025 p-05r">
+                <div class="mb-sm-3 mb-2 pb-2 border-bot-w">
                     <h2 class="fw-6 text-lg">Danh Sách Mua Vật Phẩm</h2>
                     <p class="text-sm">Lịch sử hòm vật phẩm mà bạn đã mua.</p>
                 </div>
@@ -13,7 +13,7 @@
                 <div>
                     <table class="rounded-x-025 w-100">
                         <thead>
-                            <tr class="ls-0025 vct fw-6 bor-w-1 border-b-0">
+                            <tr class="ls-0025 vct fw-6 bor-1 border-b-0">
                                 <th class="px-2 py-2">Thông tin</th>
                                 <th class="px-2 py-2 tw-max-w-sm">Chi tiết</th>
                             </tr>

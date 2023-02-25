@@ -3,9 +3,9 @@
 <div>
     <div class="px-2 gap-2 ct d-grid mx-auto">
         @include('users.box-left-content')
-        <div class="gc-8">
-            <div class="bg-box br-025 py-3 px-125 w-100">
-                <div class="border-bot-w mb-3 pb-2">
+        <div class="gc-8 gc-12i">
+            <div class="bg-box br-025 py-sm-3 px-125 w-100 p-05r">
+                <div class="border-bot-w mb-sm-3 mb-2 pb-2">
                     <h2 class="text-lg fw-6">Danh Sách Nạp Thẻ</h2>
                     <p class="text-sm">
                         Tháng 02 nạp:
@@ -20,10 +20,10 @@
                             <tr class="tr-table-tn fw-6">
                                 <th class="px-2 py-2 ">Thẻ Nạp</th>
                                 <th class="px-2 py-2">
-                                    <span class="d-block">Mã thẻ/Seri</span>
-                                    <span class="d-none">Chi tiết</span>
+                                    <span class="d-sm-block d-none">Mã thẻ/Seri</span>
+                                    <span class="d-sm-none d-block">Chi tiết</span>
                                 </th>
-                                <th class="px-2 py-2">
+                                <th class="px-2 py-2 d-sm-block d-none">
                                     M.giá/T.nhận
                                 </th>
                             </tr>

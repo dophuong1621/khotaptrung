@@ -1,10 +1,8 @@
-@extends('users.layouts_user.home')
-@section('content')
-<div class="d-block ct-l">
+<div class="d-sm-block d-none ct-l">
     <div class="px-0 py-0 w-100 position-sticky ct-l-2" style="z-index: 200;">
         <div class="pb-2 pe-2 gap-2 menu-ava d-grid">
             <div class="d-flex align-items-center ava">
-                <img class="ava-l w-100 br-9999" src="assetsU/image/unknown-avatar.jpg">
+                <img class="ava-l w-100 br-9999" src="/assetsU/image/unknown-avatar.jpg">
             </div>
             <div class="ava-r">
                 <p class="d-flex align-items-center p"><b class="me-1">ID:</b> 1650845
@@ -27,8 +25,8 @@
                     <span class="d-block ml-225">Tài khoản</span>
                 </div>
                 <div class="fw-6 text-sm ml-275 mt-1">
-                    <ul><a href="/info" class="py-1 d-block t-color-black">Thông tin chung
-                        </a> <a href="/repassword" class="py-1 d-block t-color-black">Đổi mật
+                    <ul><a href="/info" class="py-1 d-block text-black">Thông tin chung
+                        </a> <a href="/repassword" class="py-1 d-block text-black">Đổi mật
                             khẩu</a>
                     </ul>
                 </div>
@@ -41,7 +39,7 @@
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/notification" class="t-color-black py-1 d-block">Tất cả thông báo
+                    <ul><a href="/notification" class="text-black py-1 d-block">Tất cả thông báo
                         </a></ul>
                 </div>
             </div>
@@ -53,7 +51,7 @@
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/withdraw-items" class="t-color-black py-1 d-block">Rút vật phẩm</a>
+                    <ul><a href="/withdraw-items" class="text-black py-1 d-block">Rút vật phẩm</a>
                     </ul>
                 </div>
             </div>
@@ -67,9 +65,9 @@
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
                     <ul>
-                        <a href="/recharge" class="t-color-black py-1 d-block">Nạp
+                        <a href="/recharge" class="text-black py-1 d-block">Nạp
                             thẻ cào tự động</a>
-                        <a class="t-color-black py-1 d-block load-atm">Nạp qua
+                        <a class="text-black py-1 d-block atm cursor-pointer">Nạp qua
                             ATM/MOMO</a>
                     </ul>
                 </div>
@@ -82,7 +80,7 @@
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/voucher" class="t-color-black py-1 d-block">Danh sách voucher</a>
+                    <ul><a href="/voucher" class="text-black py-1 d-block">Danh sách voucher</a>
                     </ul>
                 </div>
             </div>
@@ -93,16 +91,15 @@
                         class="ml-25 d-block">Lịch
                         sử</span></div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/history/game" class="t-color-black py-1 d-block">Chơi game</a>
-                        <a href="/history/add_card" class="t-color-black py-1 d-block">Nạp thẻ</a>
-                        <a href="/history/transaction" class="t-color-black py-1 d-block">Giao dịch</a>
-                        <a href="/history/buy_nick" class="t-color-black py-1 d-block">Mua tài khoản (nick)</a>
-                        <a href="/history/buy_item" class="t-color-black py-1 d-block">Mua hòm v.phẩm</a>
-                        <a href="/history/service" class="t-color-black py-1 d-block">Mua vật phẩm (Dịch vụ)</a>
+                    <ul><a href="/history/game" class="text-black py-1 d-block">Chơi game</a>
+                        <a href="/history/add_card" class="text-black py-1 d-block">Nạp thẻ</a>
+                        <a href="/history/transaction" class="text-black py-1 d-block">Giao dịch</a>
+                        <a href="/history/buy_nick" class="text-black py-1 d-block">Mua tài khoản (nick)</a>
+                        <a href="/history/buy_item" class="text-black py-1 d-block">Mua hòm v.phẩm</a>
+                        <a href="/history/service" class="text-black py-1 d-block">Mua vật phẩm (Dịch vụ)</a>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
