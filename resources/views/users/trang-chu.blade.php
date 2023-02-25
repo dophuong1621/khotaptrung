@@ -128,7 +128,7 @@
             <div class="box2 bg-box box b-shadow">
                 <div class="mar">
                     <span class="ring ">
-                        <i class="fas fa-bell"></i>
+                        <i class="bx bxs-bell-ring"></i>
                     </span>
                     <span class="text-mar fw-7">
                         <marquee><strong>HIHAROBUX.COM - Khai Trương Tặng Robux, Random Gamepass, Trái ác quỷ v.v ở góc trái

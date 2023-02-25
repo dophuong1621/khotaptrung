@@ -35,7 +35,10 @@
                 <div class="position-relative fw-6">
                     <span
                         class="br-9999 justify-content-center align-items-center w-175 h-175 d-inline-flex position-absolute bg-color-be"
-                        style="top: -2px;"><i class="fas fa-bell"></i></span> <span class="d-block ml-225">Thông báo
+                        style="top: -2px;">
+                        <i class="bx bxs-bell-ring"></i>
+                    </span>
+                    <span class="d-block ml-225">Thông báo
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
@@ -85,11 +88,15 @@
                 </div>
             </div>
             <div class="mb-075">
-                <div class="position-relative fw-6"><span
+                <div class="position-relative fw-6">
+                    <span
                         class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: px;"><i class="fa-sharp fa-solid fa-clipboard"></i></span> <span
-                        class="ml-25 d-block">Lịch
-                        sử</span></div>
+                        style="top: px;">
+                        <i class="bx bxs-notepad"></i>
+                    </span>
+                    <span class="ml-25 d-block">Lịch
+                        sử</span>
+                </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
                     <ul><a href="/history/game" class="text-black py-1 d-block">Chơi game</a>
                         <a href="/history/add_card" class="text-black py-1 d-block">Nạp thẻ</a>
