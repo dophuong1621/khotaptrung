@@ -76,29 +76,13 @@ $(document).ready(function () {
     // })
 
     //bof left
-    if ($('.ls-c').hasClass('t-color')) {
-        $('.ls').addClass('t-color');
-        $('.bg-ls').addClass('dx');
-        $('.bxs-notepad').addClass('text-white');
-    } else if ($('.vou-c').hasClass('t-color')) {
-        $('.vou').addClass('t-color');
-        $('.fa-tag').addClass('text-white');
-        $('.bg-vou').addClass('dx');
-    } else if ($('.rec-c').hasClass('t-color')) {
-        $('.rec').addClass('t-color');
-        $('.fa-credit-card').addClass('text-white');
-        $('.bg-rec').addClass('dx');
-    }else if ($('.wd-c').hasClass('t-color')) {
-        $('.wd').addClass('t-color');
-        $('.fa-gamepad').addClass('text-white');
-        $('.bg-wd').addClass('dx');
-    }else if ($('.not-c').hasClass('t-color')) {
-        $('.not').addClass('t-color');
-        $('.bxs-bell-ring').addClass('text-white');
-        $('.bg-not').addClass('dx');
-    }else if ($('.tk-c').hasClass('t-color')) {
-        $('.tk').addClass('t-color');
-        $('.fa-user').addClass('text-white');
-        $('.bg-tk').addClass('dx');
-    }
+    Array.from($('.parent')).forEach(item=>{
+        var active = $(item).find('.t-color').length;
+
+        if(active){
+            $(item).find('.bg-par').addClass('dx');
+            $(item).find('.ic-par').addClass('text-white');
+            $(item).find('.text-par').addClass('t-color');
+        }
+    })
 });
