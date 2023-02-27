@@ -18,15 +18,17 @@
             <div class="tk mb-075">
                 <div class="position-relative fw-6">
                     <span
-                        class="br-9999 justify-content-center align-items-center w-175 h-175 d-inline-flex position-absolute bg-color-be"
+                        class="br-9999 justify-content-center align-items-center w-175 h-175 d-inline-flex position-absolute bg-color-be bg-tk"
                         style="top: -2px;">
                         <i class="fas fa-user user"></i>
                     </span>
-                    <span class="d-block ml-225">Tài khoản</span>
+                    <span class="d-block ml-225 tk">Tài khoản</span>
                 </div>
                 <div class="fw-6 text-sm ml-275 mt-1">
-                    <ul><a href="/info" class="py-1 d-block text-black">Thông tin chung
-                        </a> <a href="/repassword" class="py-1 d-block text-black">Đổi mật
+                    <ul><a href="/info"
+                            class="py-1 d-block {{ request()->is('info') ? 't-color' : 'text-black' }} tk-c">Thông tin chung
+                        </a> <a href="/repassword"
+                            class="py-1 d-block {{ request()->is('repassword') ? 't-color' : 'text-black' }} tk-c">Đổi mật
                             khẩu</a>
                     </ul>
                 </div>
@@ -34,76 +36,101 @@
             <div class="mb-075">
                 <div class="position-relative fw-6">
                     <span
-                        class="br-9999 justify-content-center align-items-center w-175 h-175 d-inline-flex position-absolute bg-color-be"
+                        class="br-9999 justify-content-center align-items-center w-175 h-175 d-inline-flex position-absolute bg-color-be bg-not"
                         style="top: -2px;">
                         <i class="bx bxs-bell-ring"></i>
                     </span>
-                    <span class="d-block ml-225">Thông báo
+                    <span class="d-block ml-225 not">Thông báo
                     </span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/notification" class="text-black py-1 d-block">Tất cả thông báo
-                        </a></ul>
-                </div>
-            </div>
-            <div class="mb-075">
-                <div class="position-relative fw-6">
-                    <span
-                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: -2px;"><i class="fas fa-gamepad"></i></span> <span class="ml-25 d-block">Trò chơi
-                    </span>
-                </div>
-                <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/withdraw-items" class="text-black py-1 d-block">Rút vật phẩm</a>
+                    <ul><a href="/notification"
+                            class="{{ request()->is('notification') ? 't-color' : 'text-black' }} py-1 d-block not-c">Tất cả
+                            thông báo
+                        </a>
                     </ul>
                 </div>
             </div>
             <div class="mb-075">
                 <div class="position-relative fw-6">
                     <span
-                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: -2px;"><i class="fa fa-credit-card"></i></span> <span class="ml-25 d-block">Giao
-                        dịch
+                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be bg-wd"
+                        style="top: -2px;">
+                        <i class="fas fa-gamepad"></i>
                     </span>
+                    <span class="ml-25 d-block wd">Trò chơi</span>
+                </div>
+                <div class="ml-275 fw-6 text-sm mt-1">
+                    <ul><a href="/withdraw-items"
+                            class="{{ request()->is('withdraw-items') ? 't-color' : 'text-black' }} py-1 d-block wd-c">Rút
+                            vật phẩm</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-075">
+                <div class="position-relative fw-6">
+                    <span
+                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be bg-rec"
+                        style="top: -2px;">
+                        <i class="fa fa-credit-card"></i>
+                    </span>
+                    <span class="ml-25 d-block rec">Giao dịch</span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
                     <ul>
-                        <a href="/recharge" class="text-black py-1 d-block">Nạp
+                        <a href="/recharge"
+                            class="{{ request()->is('recharge') ? 't-color' : 'text-black' }} py-1 d-block rec-c">Nạp
                             thẻ cào tự động</a>
-                        <a class="text-black py-1 d-block atm cursor-pointer">Nạp qua
-                            ATM/MOMO</a>
+                        <a class="text-black py-1 d-block atm cursor-pointer">Nạp qua ATM/MOMO</a>
                     </ul>
                 </div>
             </div>
             <div class="mb-075">
                 <div class="position-relative fw-6">
                     <span
-                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: px;"><i class="fa fa-tag"></i></span> <span class="ml-25 d-block">Voucher
+                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be bg-vou"
+                        style="top: -2px;">
+                        <i class="fa fa-tag"></i>
                     </span>
+                    <span class="ml-25 d-block vou">Voucher</span>
                 </div>
                 <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/voucher" class="text-black py-1 d-block">Danh sách voucher</a>
+                    <ul><a href="/voucher"
+                            class="{{ request()->is('voucher') ? 't-color' : 'text-black' }} py-1 d-block vou-c">Danh sách
+                            voucher</a>
                     </ul>
                 </div>
             </div>
             <div class="mb-075">
                 <div class="position-relative fw-6">
                     <span
-                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be"
-                        style="top: px;">
+                        class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be bg-ls"
+                        style="top: -2px;">
                         <i class="bx bxs-notepad"></i>
                     </span>
-                    <span class="ml-25 d-block">Lịch
+                    <span class="ml-25 d-block ls">Lịch
                         sử</span>
                 </div>
-                <div class="ml-275 fw-6 text-sm mt-1">
-                    <ul><a href="/history/game" class="text-black py-1 d-block">Chơi game</a>
-                        <a href="/history/add_card" class="text-black py-1 d-block">Nạp thẻ</a>
-                        <a href="/history/transaction" class="text-black py-1 d-block">Giao dịch</a>
-                        <a href="/history/buy_nick" class="text-black py-1 d-block">Mua tài khoản (nick)</a>
-                        <a href="/history/buy_item" class="text-black py-1 d-block">Mua hòm v.phẩm</a>
-                        <a href="/history/service" class="text-black py-1 d-block">Mua vật phẩm (Dịch vụ)</a>
+                <div class="ml-275 fw-6 text-sm mt-1 ">
+                    <ul>
+                        <a href="/history/game"
+                            class="{{ request()->is('history/game') ? 't-color' : 'text-black' }} py-1 d-block ls-c">Chơi
+                            game</a>
+                        <a href="/history/add_card"
+                            class="{{ request()->is('history/add_card') ? 't-color' : 'text-black' }} py-1 d-block ls-c">Nạp
+                            thẻ</a>
+                        <a href="/history/transaction"
+                            class="{{ request()->is('history/transaction') ? 't-color' : 'text-black' }} py-1 d-block ls-c">Giao
+                            dịch</a>
+                        <a href="/history/buy_nick"
+                            class="{{ request()->is('history/buy_nick') ? 't-color' : 'text-black' }} py-1 d-block ls-c">Mua
+                            tài khoản (nick)</a>
+                        <a href="/history/buy_item"
+                            class="{{ request()->is('history/buy_item') ? 't-color' : 'text-black' }} py-1 d-block ls-c">Mua
+                            hòm v.phẩm</a>
+                        <a href="/history/service"
+                            class="{{ request()->is('history/service') ? 't-color' : 'text-black' }} py-1 d-block ls-c">Mua
+                            vật phẩm (Dịch vụ)</a>
                     </ul>
                 </div>
             </div>
