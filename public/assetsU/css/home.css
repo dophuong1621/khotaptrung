@@ -242,6 +242,14 @@ th {
     color:#ef4444;
 }
 
+.t-color-momo{
+    color: #BE185D;
+}
+
+.bg-momo{
+    background-color: #BE185D;
+}
+
 .bg-color{
     background-color: #FEE2E2 !important;
 }
@@ -257,6 +265,10 @@ th {
 
 .ml-05{
     margin-left: 0.5rem;
+}
+
+.ml-075{
+    margin-left: 0.75rem;
 }
 
 ul{
@@ -338,6 +350,11 @@ ul{
     border-radius: 0.5rem;
 }
 
+.my-075 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
 .border-bot-w{
     border-bottom: 1px solid #E5E5E5;
 }
@@ -348,6 +365,10 @@ ul{
 
 .border-w-2-gray{
     border: 2px solid #E5E5E5;
+}
+
+.bor-w-2{
+    border-width: 2px;
 }
 
 .grid-temp-col-12{
@@ -367,6 +388,14 @@ ul{
 .py-075{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+}
+
+.pt-075{
+    padding-top: 0.75rem;
+}
+
+.bg-green:hover{
+    background-color: #22c55e !important;
 }
 
 .bor-1{
@@ -401,14 +430,24 @@ ul{
     padding-right: 2rem;
 }
 
-
-
 .h-25r{
     height: 2.5rem;
 }
 
-.bor-coler-be{
-    border-color: #E5E5E5;
+.h-2r{
+    height: 2.5rem;
+}
+
+.h-16r{
+    height: 16rem;
+}
+
+.bor-col-red{
+    border-color: red;
+}
+
+.border-dashed {
+    border-style: dashed;
 }
 
 .bg-color-be{
@@ -419,8 +458,17 @@ ul{
     line-height: 1.75rem !important;
 }
 
+.line-h-15{
+    line-height: 1.5rem !important;
+}
+
 .padding-1r{
     padding: 1rem;
+}
+
+.text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
 }
 
 .text-xl {
@@ -460,6 +508,14 @@ ul{
 
 .h-15r{
     height: 1.5rem;
+}
+
+.bg-gray{
+    background-color: gray;
+}
+
+.border-0{
+    border: 0px;
 }
 
 .w-175r{

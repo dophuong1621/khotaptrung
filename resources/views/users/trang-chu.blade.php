@@ -5,8 +5,6 @@
             {{-- box1 --}}
             <div class="box1">
                 <div class="img-home">
-                    {{-- <img src="https://cdns.diongame.com/static/image-3659d247-c6ef-4b72-87ef-9bce6e327f8e.jpeg"
-                    alt=""> --}}
                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -16,10 +14,6 @@
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <img src="https://cdns.diongame.com/static/image-3659d247-c6ef-4b72-87ef-9bce6e327f8e.jpeg"
                                     class="d-block w-100 img-h " alt="...">
-                                {{-- <div class="carousel-caption d-none d-md-block">
-                              <h5>First slide label</h5>
-                              <p>Some representative placeholder content for the first slide.</p>
-                            </div> --}}
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
@@ -139,6 +133,71 @@
             {{-- box3 --}}
             <div class="box3">
                 <div class="text-b3 bg-box box b-shadow">
+                    <h3 class="uppercase t-box fw-7">dịch vụ roblox uy tín</h3>
+                </div>
+                <div class="ct-tk">
+                    <div class="ct-box bg-box col">
+                        <a href="#" class="tk">
+                            <div class="img-tk">
+                                <img src="https://cdns.diongame.com/static/image-276ce799-cb65-49fe-bcfd-698b74f65041.gif"
+                                    class="im-tk">
+                            </div>
+                            <div class="text-tk">
+                                <h4 class="title-tk uppercase fw-6">dịch vụ mua robux vip</h4>
+                                <div class="mb-025 ct-t-tk">
+                                    <span class="db-tk">Đã bán: <b class="t-color">11k</b></span>
+                                </div>
+                                <div class="sale mt-2">
+                                    <button class="t-sale">
+                                        <span>Rẻ nhất thị trường</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ct-box bg-box col">
+                        <a href="#" class="tk">
+                            <div class="img-tk">
+                                <img src="https://cdns.diongame.com/static/image-fef42ab4-6850-47ac-97fc-2b17d262d4bb.gif"
+                                    class="im-tk">
+                            </div>
+                            <div class="text-tk">
+                                <h4 class="title-tk uppercase fw-6">robux chính hãng và premium</h4>
+                                <div class="mb-025 ct-t-tk">
+                                    <span class="db-tk">Đã bán: <b class="t-color">3.3k</b></span>
+                                </div>
+                                <div class="sale mt-2">
+                                    <button class="t-sale">
+                                        <span>Duyệt đơn siêu tốc</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ct-box bg-box col">
+                        <a href="#" class="tk">
+                            <div class="img-tk">
+                                <img src="https://cdns.diongame.com/static/image-9971a5d0-96f1-4912-8f1e-aa7582c41a98.gif"
+                                    class="im-tk">
+                            </div>
+                            <div class="text-tk">
+                                <h4 class="title-tk uppercase fw-6">gamepass roblox</h4>
+                                <div class="mb-025 ct-t-tk">
+                                    <span class="db-tk">Đã bán: <b class="t-color">64.6k</b></span>
+                                </div>
+                                <div class="sale mt-2">
+                                    <button class="t-sale">
+                                        <span>Mua game pass siêu nhanh</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{-- box4 --}}
+            <div class="box4">
+                <div class="text-b4 bg-box box b-shadow">
                     <h3 class="uppercase t-box fw-7">danh mục tài khoản siêu ngon</h3>
                 </div>
                 <div class="ct-tk">
@@ -377,33 +436,6 @@
                     </div>
                 </div>
             </div>
-            {{-- box4 --}}
-            <div class="box4">
-                <div class="text-b4 bg-box box b-shadow">
-                    <h3 class="uppercase t-box fw-7">dịch vụ roblox uy tín</h3>
-                </div>
-                <div class="ct-tk">
-                    <div class="ct-box bg-box col">
-                        <a href="#" class="tk">
-                            <div class="img-tk">
-                                <img src="https://cdns.diongame.com/static/image-fef42ab4-6850-47ac-97fc-2b17d262d4bb.gif"
-                                    class="im-tk">
-                            </div>
-                            <div class="text-tk">
-                                <h4 class="title-tk uppercase fw-6">robux chính hãng và premium</h4>
-                                <div class="mb-025 ct-t-tk">
-                                    <span class="db-tk">Đã bán: <b class="t-color">3.3k</b></span>
-                                </div>
-                                <div class="sale mt-2">
-                                    <button class="t-sale">
-                                        <span>Duyệt đơn siêu tốc</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
             {{-- box5 --}}
             <div class="box5">
                 <div class="text-b5 bg-box box b-shadow">
@@ -486,6 +518,47 @@
                             </div>
                         </a>
                     </div>
+                </div>
+            </div>
+            {{-- box6 --}}
+            <div class="box6">
+                <div class="text-b6 bg-box box b-shadow">
+                    <h3 class="uppercase t-box fw-7">danh mục tài khoản game khác</h3>
+                </div>
+                <div class="ct-tk">
+                    <div class="ct-box bg-box col">
+                        <a href="#" class="tk">
+                            <div class="img-tk">
+                                <img src="https://cdns.diongame.com/static/image-91c07ba2-9d01-4fdf-aec9-913f39c215ae.gif"
+                                    class="im-tk">
+                            </div>
+                            <div class="text-tk">
+                                <h4 class="title-tk uppercase fw-6">danh mục game liên quân</h4>
+                                <div class="mb-025 ct-t-tk">
+                                    <span class="db-tk">Đã bán: <b class="t-color">23.9k</b></span>
+                                </div>
+                                <div class="sale mt-2">
+                                    <button class="t-sale">
+                                        <span>Siêu giảm giá</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{-- animation --}}
+            <div>
+                <div class="position-fixed d-inline animation" style="bottom: 20px; left: 20px; z-index: 1000">
+                    <a>
+                        <img src="https://cdns.diongame.com/static/image-abe06c17-1fcf-4919-9021-50368f514235.gif"
+                            class="h-16r cursor-pointer">
+                    </a>
+                    <button
+                        class="position-absolute h-15r w-15r d-flex align-items-center justify-content-center br-025 dx text-white close"
+                        style="left: 0px; top: 0px; z-index: 101">
+                        <i class="bx bx-x"></i>
+                    </button>
                 </div>
             </div>
         </div>

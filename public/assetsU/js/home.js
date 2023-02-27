@@ -75,7 +75,7 @@ $(document).ready(function () {
     //     $('.popup-login').css({ 'display': 'block' });
     // })
 
-    //bof left
+    //box left
     Array.from($('.parent')).forEach(item=>{
         var active = $(item).find('.t-color').length;
 
@@ -84,5 +84,31 @@ $(document).ready(function () {
             $(item).find('.ic-par').addClass('text-white');
             $(item).find('.text-par').addClass('t-color');
         }
+    })
+
+    //content popup atm
+    $('.bank').click(function(){
+        $('.mt-3').css({'display': 'none'});
+        $('.ct-bank').css({'display': 'block'});
+        $('.ct-momo').css({'display': 'none'});
+        $('.text-bank').addClass('text-white');
+        $('.bank').addClass('dx');
+        $('.text-momo').removeClass('text-white');
+        $('.momo').removeClass('dx');
+    });
+
+    $('.momo').click(function(){
+        $('.ct-bank').css({'display': 'none'});
+        $('.mt-3').css({'display': 'none'});
+        $('.ct-momo').css({'display': 'block'});
+        $('.text-momo').addClass('text-white');
+        $('.momo').addClass('dx');
+        $('.text-bank').removeClass('text-white');
+        $('.bank').removeClass('dx');
+    });
+
+    //anh dong
+    $('.close').click(function(){
+        $('.animation').addClass('d-none');
     })
 });

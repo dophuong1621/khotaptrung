@@ -56,7 +56,7 @@
                     <span
                         class="br-9999 w-175 h-175 justify-content-center align-items-center d-inline-flex position-absolute bg-color-be bg-par"
                         style="top: -2px;">
-                        <i class="fas fa-gamepad ic-par"></i>
+                        <i class="bx bxs-game ic-par"></i>
                     </span>
                     <span class="ml-25 d-block text-par">Trò chơi</span>
                 </div>

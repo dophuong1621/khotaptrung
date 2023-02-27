@@ -1,35 +1,46 @@
 {{-- popup atm --}}
 <div class="load-atm" style="display: none">
-    <div class="modal-atm" style="z-index: 100001">
+    <div class="modal-atm" style="z-index: 1002">
         <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog tw-dialog-trans"
             style="margin-top: 15vh;">
             <div class="el-dialog__header">
                 <div class="text-white fw-6">
                     NẠP TIỀN - CHUYỂN KHOẢN QUA
                 </div>
-                <button type="button" aria-label="Close" class="el-dialog__headerbtn"><i
-                        class="el-dialog__close el-icon btn-close btn-close-white"></i></button>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn">
+                    <i class="el-dialog__close el-icon btn-close btn-close-white"></i>
+                </button>
             </div>
             <div class="el-dialog__body">
                 <div class="my-3" style="word-break: break-word;">
                     <div class="d-grid grid-temp-col-12 gap-3">
-                        <div class="gc-6 gc-12i"><button
-                                class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
-                                    class="w-15 lazyLoad isLoaded" src="/assetsU/image/bank.png"> <span
-                                    class="ml-05 fw-6">Ngân Hàng (ATM)</span></button></div>
-                        <div class="gc-6 gc-12i"><button
-                                class="px-3 align-items-center br-025 w-100 d-flex h-3r border"><img
-                                    class="w-15 lazyLoad isLoaded" src="/assetsU/image/momo.png"> <span
-                                    class="ml-05 fw-6">Ứng dụng MOMO</span></button></div>
+                        <div class="gc-6 gc-12i">
+                            <button class="px-3 align-items-center br-025 w-100 d-flex h-3r border bank">
+                                <img class="w-15 lazyLoad isLoaded" src="/assetsU/image/bank.png">
+                                <span class="ml-05 fw-6 text-bank">Ngân Hàng (ATM)</span>
+                            </button>
+                        </div>
+                        <div class="gc-6 gc-12i">
+                            <button class="px-3 align-items-center br-025 w-100 d-flex h-3r border momo">
+                                <img class="w-15 lazyLoad isLoaded" src="/assetsU/image/momo.png">
+                                <span class="ml-05 fw-6 text-momo">Ứng dụng MOMO</span>
+                            </button>
+                        </div>
                     </div>
                     <div>
                         <div class="mt-3">
                             <div class="text-sm fw-6">
-                                <p><span><i class="bx bx-caret-right"></i></span> Hệ thống nạp
-                                    <b class="t-color">ATM/MOMO tự động 24/24</b>, Nạp 100k
-                                    nhận 110k tiền shop
+                                <p>
+                                    <span>
+                                        <i class="bx bx-caret-right"></i>
+                                    </span> Hệ thống nạp <b class="t-color">ATM/MOMO tự động 24/24</b>, Nạp 100k nhận
+                                    110k tiền shop
                                 </p>
-                                <p><span><i class="bx bx-caret-right"></i></span><b> Lưu ý: </b> Chuyển tiền
+                                <p>
+                                    <span>
+                                        <i class="bx bx-caret-right"></i>
+                                    </span>
+                                    <b> Lưu ý: </b> Chuyển tiền
                                     nhanh 24/7 để tránh bị treo, chậm
                                     tiền! Nếu gửi đúng stk và nội dung mà 30p không nhận được tiền
                                     hoặc chuyển ghi sai nội dung vui lòng liên hệ page để được hỗ
@@ -49,31 +60,165 @@
                                             Số tiền bạn chuyển
                                         </label>
                                         <input type="number" placeholder=""
-                                            class="focus:tw-outline-none tw-pt-3 tw-px-2 h-3r tw-rounded border-w-2-gray w-100 text-sm fw-6 tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
+                                            class="pt-075 px-2 h-3r br-025 border-w-2-gray w-100 text-sm fw-6">
                                     </div>
-                                    <span class="mt-1 position-absolute text-xs d-block fw-6"><i
-                                            class="position-relative fw-5 bx bx-subdirectory-right"
+                                    <span class="mt-1 position-absolute text-xs d-block fw-6">
+                                        <i class="position-relative fw-5 bx bx-subdirectory-right"
                                             style="top: 1px;"></i>
                                         0đ</span>
                                 </div>
-                                <div class="box-20"><i class="bx bx-transfer-alt text-lg"></i></div>
+                                <div class="box-20">
+                                    <i class="bx bx-transfer-alt text-lg"></i>
+                                </div>
                                 <div class="box-40">
-                                    <div class="w-100 position-relative"><label
-                                            class="d-inline-block position-absolute text-xs fw-5"
+                                    <div class="w-100 position-relative">
+                                        <label class="d-inline-block position-absolute text-xs fw-5"
                                             style="left: 10px; top: 6px;">
                                             Tiền nhận trên shop
-                                        </label> <input readonly="readonly" placeholder=""
-                                            class="focus:tw-outline-none tw-pt-3 tw-px-2 h-3r tw-rounded border-w-2-gray w-100 text-sm fw-6 tw-placeholder-gray-800 focus:tw-placeholder-white tw-transition tw-duration-200 tw-text-red-700">
+                                        </label>
+                                        <input readonly="readonly" placeholder=""
+                                            class="pt-075 px-2 h-3r br-025 border-w-2-gray w-100 text-sm fw-6">
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- content popup atm --}}
+                        <div class="mt-3 ct-bank" style="display:none;">
+                            <div>
+                                <div>
+                                    <div class="text-sm t-color line-h-15">
+                                        <p>
+                                            <span class="text-black">
+                                                <strong>THÔNG TIN TÀI KHOẢN NGÂN HÀNG</strong>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <strong>CHỦ TÀI KHOẢN: </strong>
+                                            <span>
+                                                <strong>TRẦN VIỆT TÙNG</strong>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <strong>NGÂN HÀNG : </strong>
+                                            <span>
+                                                <strong>VIETCOMBANK</strong>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <strong>SỐ TÀI KHOẢN : </strong>
+                                            <span>
+                                                <strong>0451000413951</strong>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <button
+                                        class="text-white uppercase fw-7 text-xs px-2 br-025 h-15r mt-1 bg-gray border-0">
+                                        Copy số tài khoản
+                                    </button>
+                                </div>
+                                <div class="border-bot-w my-075"></div>
+                                <div class="my-2">
+                                    <p class="fw-6 text-sm mb-1">
+                                        Nội dung chuyển khoản:
+                                    </p>
+                                    <div class="position-relative">
+                                        <input readonly="readonly" value="nap1650845"
+                                            class="t-color fw-8 text-lg px-075 bor-col-red border-dashed w-100 bor-w-2 br-025 h-25r">
+                                        <button
+                                            class="text-white fw-6 text-sm py-1 px-3 dx br-025 align-items-center d-flex h-15r position-absolute"
+                                            style="top: 8px; right: 8px;">
+                                            COPY NỘI DUNG
+                                        </button>
+                                    </div>
+                                    <div class="mt-2 fw-6 text-sm">
+                                        <i class="ml-075 bx bxs-upvote"></i> Khi chuyển khoản qua Ngân hàng (ATM) bạn
+                                        cần ghi nội dung
+                                        <b class="mx-1 t-color">nap1650845 </b>bên trên.
+                                    </div>
+                                    <div class="mt-1 text-sm fw-6 t-color">
+                                        <i>Lưu ý: Sau khi chuyển khoản xong, hãy chờ "vài phút" rồi ấn <b>"Xác nhận. Tôi
+                                                đã chuyển"</b>.
+                                        </i>
+                                    </div>
+                                    <button class="my-2 h-25r fw-6 br-025 text-white px-075 border-0 bg-green"
+                                        style="background-color:#1a9d60;">
+                                        Xác nhận. Tôi đã chuyển
+                                    </button>
+                                    <div class="mt-1 fw-6 text-sm t-color">
+                                        <i>
+                                            <p>
+                                                Giao dịch chuyển sai "Nội dung chuyển khoản" sẽ không được xử lý
+                                                tự động. Hãy liên hệ Fanpage để được hỗ trợ.
+                                            </p>
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- content popup momo --}}
+                        <div class="mt-3 ct-momo" style="display:none;">
+                            <div>
+                                <div>
+                                    <div class="text-sm t-color-momo line-h-15">
+                                        <p><strong>THÔNG TIN VÍ MOMO</strong></p>
+                                        <p><strong>CHỦ TÀI KHOẢN: </strong>
+                                            <span class="t-color">
+                                                <strong>TRẦN VIỆT TÙNG</strong>
+                                            </span>
+                                        </p>
+                                        <p><strong>&#xFEFF;VÍ MOMO: </strong>
+                                            <span class="t-color"><strong>0398793456</strong>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <button
+                                        class="text-white uppercase fw-7 text-xs px-2 br-025 h-15r mt-1 bg-gray border-0">
+                                        Copy số tài khoản ví MOMO
+                                    </button>
+                                </div>
+                                <div class="border-bot-w my-075"></div>
+                                <div class="my-2">
+                                    <p class="fw-6 text-sm mb-1">
+                                        Nội dung <b class="t-color">ghi chú</b> khi chuyển:
+                                    </p>
+                                    <div class="position-relative">
+                                        <input readonly="readonly" value="nap1650845"
+                                            class="t-color-momo fw-8 text-lg px-075 bor-col-red border-dashed w-100 bor-w-2 br-025 h-25r">
+                                        <button
+                                            class="text-white fw-6 text-sm py-1 px-3 bg-momo br-025 align-items-center d-flex h-15r position-absolute border-0"
+                                            style="top: 8px; right: 8px;">
+                                            COPY NỘI DUNG
+                                        </button>
+                                    </div>
+                                    <div class="mt-2 fw-6 text-sm">
+                                        <i class="ml-075 bx bxs-upvote"></i> Khi chuyển khoản qua
+                                        ví Momo bạn
+                                        cần ghi nội dung ghi chú
+                                        <b class="mx-1 t-color-momo">nap1650845 </b>
+                                        bên trên.
+                                    </div>
+                                    <div class="mt-1 fw-6 text-sm t-color">
+                                        <p>
+                                            Lưu ý: Nếu quá 30 phút không nhận được tiền, vui lòng liên hệ page
+                                            hỗ trợ!
+                                        </p>
+                                        <i>- Giao dịch chuyển sai "Nội dung ghi chú" sẽ không
+                                            được xử lý tự
+                                            động. Hãy liên hệ Fanpage để được hỗ trợ.
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="border-bot-w my-075"></div>
+                                <div class="mt-1">
+                                    <p class="fw-6 text-sm mb-1">
+                                        Vui lòng chuyển trên 5000đ để được cộng tự động.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!---->
-                <!---->
             </div>
-            <!---->
         </div>
     </div>
 </div>
@@ -111,81 +256,125 @@
                         </div>
                         <div class="mb-3 bor-w75-gray"></div>
                         <div>
-                            <div class="mb-075">
+                            <div class="mb-075 parent">
                                 <div class="position-relative fw-6"><span
-                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
-                                        style="top: -2px;"><i class="text-lg bx bxs-user "></i></span> <span
-                                        class="ml-25r d-block">Tài khoản
-                                    </span></div>
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be bg-par"
+                                        style="top: -2px;">
+                                        <i class="text-lg bx bxs-user ic-par"></i>
+                                    </span>
+                                    <span class="ml-25r d-block text-par">Tài khoản</span>
+                                </div>
                                 <div class="ml-275 mt-1 text-sm fw-6">
-                                    <ul><a href="/info" class="d-block py-1 text-black ">Thông tin chung
-                                        </a> <a href="/repassword" class="d-block py-1 text-black">Đổi mật khẩu</a>
+                                    <ul>
+                                        <a href="/info"
+                                            class="d-block py-1 {{ request()->is('info') ? 't-color' : 'text-black' }}">Thông
+                                            tin chung</a>
+                                        <a href="/repassword"
+                                            class="d-block py-1 {{ request()->is('repassword') ? 't-color' : 'text-black' }}">Đổi
+                                            mật khẩu</a>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mb-075">
-                                <div class="position-relative fw-6"><span
-                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
-                                        style="top: -2px;"><i class="text-lg bx bxs-bell"></i></span> <span
-                                        class="ml-25r d-block">Thông báo
-                                    </span></div>
+                            <div class="mb-075 parent">
+                                <div class="position-relative fw-6">
+                                    <span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be bg-par"
+                                        style="top: -2px;">
+                                        <i class="text-lg bx bxs-bell ic-par"></i>
+                                    </span>
+                                    <span class="ml-25r d-block text-par">Thông báo
+                                    </span>
+                                </div>
                                 <div class="ml-275 mt-1 text-sm fw-6">
-                                    <ul><a href="/notification" class="d-block py-1 text-black">Tất cả thông báo
+                                    <ul><a href="/notification"
+                                            class="d-block py-1 {{ request()->is('notification') ? 't-color' : 'text-black' }}">Tất
+                                            cả thông báo
                                         </a></ul>
                                 </div>
                             </div>
-                            <div class="mb-075">
+                            <div class="mb-075 parent">
                                 <div class="position-relative fw-6"><span
-                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
-                                        style="top: -2px;"><i class="text-lg bx bxs-game"></i></span> <span
-                                        class="ml-25r d-block">Trò chơi
-                                    </span></div>
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be bg-par"
+                                        style="top: -2px;">
+                                        <i class="text-lg bx bxs-game ic-par"></i>
+                                    </span>
+                                    <span class="ml-25r d-block text-par">Trò chơi
+                                    </span>
+                                </div>
                                 <div class="ml-275 mt-1 text-sm fw-6">
-                                    <ul><a href="/withdraw-items" class="d-block py-1 text-black">Rút vật phẩm</a>
+                                    <ul>
+                                        <a href="/withdraw-items"
+                                            class="d-block py-1 {{ request()->is('withdraw-items') ? 't-color' : 'text-black' }}">Rút
+                                            vật phẩm</a>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mb-075">
-                                <div class="position-relative fw-6"><span
-                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
-                                        style="top: -2px;"><i class="text-lg bx bxs-wallet-alt"></i></span> <span
-                                        class="ml-25r d-block">Giao dịch
-                                    </span></div>
+                            <div class="mb-075 parent">
+                                <div class="position-relative fw-6">
+                                    <span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be bg-par"
+                                        style="top: -2px;">
+                                        <i class="text-lg bx bxs-wallet-alt ic-par"></i>
+                                    </span>
+                                    <span class="ml-25r d-block text-par">Giao dịch
+                                    </span>
+                                </div>
                                 <div class="ml-275 mt-1 text-sm fw-6">
                                     <ul>
-                                        <a href="/recharge" class="d-block py-1 text-black">Nạp
+                                        <a href="/recharge"
+                                            class="d-block py-1 {{ request()->is('recharge') ? 't-color' : 'text-black' }}">Nạp
                                             thẻ cào tự động</a>
-                                        <a class="cursor-pointer d-block py-1 text-black atm">Nạp qua
+                                        <a class="cursor-pointer d-block py-1 atm text-black">Nạp qua
                                             ATM/MOMO</a>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mb-075">
-                                <div class="position-relative fw-6"><span
-                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
-                                        style="top: -2px;"><i class="text-lg bx bxs-purchase-tag-alt"></i></span>
-                                    <span class="ml-25r d-block">Voucher
+                            <div class="mb-075 parent">
+                                <div class="position-relative fw-6">
+                                    <span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be bg-par"
+                                        style="top: -2px;">
+                                        <i class="text-lg bx bxs-purchase-tag-alt ic-par"></i>
+                                    </span>
+                                    <span class="ml-25r d-block text-par">Voucher
                                     </span>
                                 </div>
                                 <div class="ml-275 mt-1 text-sm fw-6">
-                                    <ul><a href="/voucher" class="d-block py-1 text-black">Danh sách voucher</a></ul>
+                                    <ul>
+                                        <a href="/voucher"
+                                            class="d-block py-1 {{ request()->is('voucher') ? 't-color' : 'text-black' }}">Danh
+                                            sách voucher</a>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="mb-075">
-                                <div class="position-relative fw-6"><span
-                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be"
-                                        style="top: -2px;"><i class="text-lg bx bxs-notepad"></i></span> <span
-                                        class="ml-25r d-block">Lịch sử</span></div>
+                            <div class="mb-075 parent">
+                                <div class="position-relative fw-6">
+                                    <span
+                                        class="h-175r w-175r br-9999 d-inline-flex justify-content-center align-items-center position-absolute bg-color-be bg-par"
+                                        style="top: -2px;">
+                                        <i class="text-lg bx bxs-notepad ic-par"></i>
+                                    </span>
+                                    <span class="ml-25r d-block text-par">Lịch sử</span>
+                                </div>
                                 <div class="ml-275 mt-1 text-sm fw-6">
-                                    <ul><a href="/history/game" class="d-block py-1 text-black">Chơi game</a> <a
-                                            href="/history/add_card" class="d-block py-1 text-black">Nạp thẻ</a> <a
-                                            href="/history/transaction" class="d-block py-1 text-black">Giao dịch</a>
-                                        <a href="/history/buy_nick" class="d-block py-1 text-black">Mua tài khoản
-                                            (nick)</a>
-                                        <a href="/history/buy_items" class="d-block py-1 text-black">Mua hòm
-                                            v.phẩm</a> <a href="/history/service" class="d-block py-1 text-black">Mua
-                                            vật phẩm (Dịch
-                                            vụ)</a>
+                                    <ul><a href="/history/game"
+                                            class="d-block py-1 {{ request()->is('history/game') ? 't-color' : 'text-black' }}">Chơi
+                                            game</a>
+                                        <a href="/history/add_card"
+                                            class="d-block py-1 {{ request()->is('history/add_card') ? 't-color' : 'text-black' }}">Nạp
+                                            thẻ</a>
+                                        <a href="/history/transaction"
+                                            class="d-block py-1 {{ request()->is('history/transaction') ? 't-color' : 'text-black' }}">Giao
+                                            dịch</a>
+                                        <a href="/history/buy_nick"
+                                            class="d-block py-1 {{ request()->is('history/buy_nick') ? 't-color' : 'text-black' }}">Mua
+                                            tài khoản (nick)</a>
+                                        <a href="/history/buy_items"
+                                            class="d-block py-1 {{ request()->is('history/buy_items') ? 't-color' : 'text-black' }}">Mua
+                                            hòm v.phẩm</a>
+                                        <a href="/history/service"
+                                            class="d-block py-1 {{ request()->is('history/service') ? 't-color' : 'text-black' }}">Mua
+                                            vật phẩm (Dịch vụ)</a>
                                     </ul>
                                 </div>
                             </div>
