@@ -67,4 +67,10 @@ $(document).ready(function () {
             $('.btn-menu-left').css({ 'display': 'none' });
         }
     });
+
+    //popup login
+    // $(window).load(function(){
+    //     $('.popup-login').css({ 'display': 'block' });
+
+    // })
 });

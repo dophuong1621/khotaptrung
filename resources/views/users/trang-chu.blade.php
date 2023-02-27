@@ -490,4 +490,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $(window).load(function() {
+            $('.popup-login').css({
+                'display': 'block'
+            });
+        })
+    </script>
 @endsection
