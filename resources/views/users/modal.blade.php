@@ -198,7 +198,7 @@
 </div>
 
 {{-- popup-login  --}}
-<div class="popup-login" style="z-index: 1002;">
+<div class="popup-login" style="z-index: 1002;display:none">
     <div role="dialog" aria-modal="true" aria-label="dialog" class="modal-home" style="margin-top:15vh;">
         <div class="tb-login">
             <div class="t-color fw-7">
