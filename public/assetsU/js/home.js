@@ -22,13 +22,6 @@ $(document).ready(function () {
         }
     });
 
-    // popup login
-    $(window).on('click', function (e) {
-        if ($(e.target).is('.popup-login')) {
-            $('.popup-login').css({ 'display': 'none' });
-        }
-    });
-
     // bxh
     var sk = $('.sk-new');
     var tn = $('.top-nap');
@@ -68,9 +61,17 @@ $(document).ready(function () {
         }
     });
 
-    //popup login
+    // popup login
+    $(window).on('click', function (e) {
+        if ($(e.target).is('.popup-login')) {
+            $('.popup-login').css({ 'display': 'none' });
+        }
+    });
+
+    $('.ttb').click(function(){
+        $('.popup-login').css({'display': 'none'})
+    });
     // $(window).load(function(){
     //     $('.popup-login').css({ 'display': 'block' });
-
     // })
 });
