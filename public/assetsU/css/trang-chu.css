@@ -270,7 +270,7 @@
     z-index: 1;
 }
 
-.t-tc:after {
+.tc-a:after {
     content: "";
     position: absolute;
     top: 94%;

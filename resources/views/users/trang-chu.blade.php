@@ -34,7 +34,7 @@
                         <div class="top-nap pb-1 pe-1 ps-1">
                             <span class="t-top uppercase t-color fw-8">Top Nạp T.2</span>
                             <div class="tc d-flex justify-content-center">
-                                <button class="t-tc uppercase fw-7 text-white pe-2 ps-2">Thẻ cào</button>
+                                <button class="t-tc uppercase fw-7 text-white pe-2 ps-2 tc-a">Thẻ cào</button>
                             </div>
                         </div>
                         <div class="sk-new d-flex bg-box-gray">

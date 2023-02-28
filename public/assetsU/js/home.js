@@ -57,6 +57,7 @@ $(document).ready(function () {
         $('.t-top').addClass('text-black');
         $('.nt-ct-h').addClass('d-none');
         $('.t-ct-h').removeClass('d-none');
+        $('.t-tc').removeClass('tc-a');
     });
 
     tn.click(function () {
@@ -66,6 +67,7 @@ $(document).ready(function () {
         $('.t-top').removeClass('text-black');
         $('.nt-ct-h').removeClass('d-none');
         $('.t-ct-h').addClass('d-none');
+        $('.t-tc').addClass('tc-a');
     });
 
     // dropdown
