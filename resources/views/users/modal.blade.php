@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="mt-3">
+                        <div class="mt-3 ct-nt">
                             <div class="text-sm fw-6">
                                 <p>
                                     <span>
@@ -48,7 +48,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3 ct-nt">
                             <label class="uppercase t-color fw-7 text-sm d-block mb-2">
                                 Quy Đổi Tiền Nạp ATM/MOMO
                             </label>
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         {{-- content popup atm --}}
-                        <div class="mt-3 ct-bank" style="display:none;">
+                        <div class="mt-3" id="ct-bank"style="display:none;">
                             <div>
                                 <div>
                                     <div class="text-sm t-color line-h-15">
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         {{-- content popup momo --}}
-                        <div class="mt-3 ct-momo" style="display:none;">
+                        <div class="mt-3" id="ct-momo" style="display:none;">
                             <div>
                                 <div>
                                     <div class="text-sm t-color-momo line-h-15">
@@ -244,9 +244,9 @@
                             </div>
                             <div class="gc-9">
                                 <p class="d-flex align-items-center">
-                                    <b class="me-1">ID:</b><span id="id-user"> 1650845</span>
+                                    <b class="me-1">ID:</b> 1650845
                                     <span
-                                        class="w-1 h-1 d-flex align-items-center justify-content-center ms-2 cursor-pointer" onclick="copyId('#id-user')">
+                                        class="w-1 h-1 d-flex align-items-center justify-content-center ms-2 cursor-pointer">
                                         <i class="bx bxs-copy"></i>
                                     </span>
                                 </p>
@@ -386,8 +386,8 @@
     </div>
 </div>
 
-{{-- popup-login  --}}
-<div class="popup-login" style="z-index: 1002;display:none">
+{{-- popup-home  --}}
+<div class="popup-home" style="z-index: 1002;display:none">
     <div role="dialog" aria-modal="true" aria-label="dialog" class="modal-home" style="margin-top:15vh;">
         <div class="tb-login">
             <div class="t-color fw-7">

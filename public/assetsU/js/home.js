@@ -12,14 +12,38 @@ $(document).ready(function () {
 
     close.click(function () {
         modal.hide();
-        $('.btn-menu-left').css({ 'display': 'none' });
-        $('.popup-login').css({ 'display': 'none' });
+        $('#ct-bank, #ct-momo, .dropdown, .btn-menu-left, .popup-home').css({ 'display': 'none' });
     });
 
     $(window).on('click', function (e) {
         if ($(e.target).is('.modal-atm')) {
             modal.hide();
+            $('#ct-bank, #ct-momo, .dropdown').css({ 'display': 'none' });
+            $('.ct-nt').css({ 'display': 'block' });
+            $('.text-momo, .text-bank').removeClass('text-white');
+            $('.momo, .bank').removeClass('dx');
         }
+    });
+
+    //content popup atm
+    $('.bank').click(function () {
+        $('.ct-nt').css({ 'display': 'none' });
+        $('#ct-bank').css({ 'display': 'block' });
+        $('#ct-momo').css({ 'display': 'none' });
+        $('.text-bank').addClass('text-white');
+        $('.bank').addClass('dx');
+        $('.text-momo').removeClass('text-white');
+        $('.momo').removeClass('dx');
+    });
+
+    $('.momo').click(function () {
+        $('#ct-bank').css({ 'display': 'none' });
+        $('.ct-nt').css({ 'display': 'none' });
+        $('#ct-momo').css({ 'display': 'block' });
+        $('.text-momo').addClass('text-white');
+        $('.momo').addClass('dx');
+        $('.text-bank').removeClass('text-white');
+        $('.bank').removeClass('dx');
     });
 
     // bxh
@@ -63,75 +87,51 @@ $(document).ready(function () {
 
     // popup login
     $(window).on('click', function (e) {
-        if ($(e.target).is('.popup-login')) {
-            $('.popup-login').css({ 'display': 'none' });
+        if ($(e.target).is('.popup-home')) {
+            $('.popup-home').css({ 'display': 'none' });
         }
     });
 
     $('.ttb').click(function () {
-        $('.popup-login').css({ 'display': 'none' })
+        $('.popup-home').css({ 'display': 'none' })
     });
-    // $(window).load(function(){
-    //     $('.popup-login').css({ 'display': 'block' });
-    // })
 
     //box left
-    Array.from($('.parent')).forEach(item=>{
+    Array.from($('.parent')).forEach(item => {
         var active = $(item).find('.t-color').length;
 
-        if(active){
+        if (active) {
             $(item).find('.bg-par').addClass('dx');
             $(item).find('.ic-par').addClass('text-white');
             $(item).find('.text-par').addClass('t-color');
         }
     })
 
-    //content popup atm
-    $('.bank').click(function(){
-        $('.mt-3').css({'display': 'none'});
-        $('.ct-bank').css({'display': 'block'});
-        $('.ct-momo').css({'display': 'none'});
-        $('.text-bank').addClass('text-white');
-        $('.bank').addClass('dx');
-        $('.text-momo').removeClass('text-white');
-        $('.momo').removeClass('dx');
-    });
-
-    $('.momo').click(function(){
-        $('.ct-bank').css({'display': 'none'});
-        $('.mt-3').css({'display': 'none'});
-        $('.ct-momo').css({'display': 'block'});
-        $('.text-momo').addClass('text-white');
-        $('.momo').addClass('dx');
-        $('.text-bank').removeClass('text-white');
-        $('.bank').removeClass('dx');
-    });
-
     //anh dong
-    $('.close').click(function(){
+    $('.close').click(function () {
         $('.animation').addClass('d-none');
     });
 
     // btn vina,mobi,viettel
-    $('.viettel').click(function(){
+    $('.viettel').click(function () {
         $(this).addClass('bor-col-red');
-        $(this).children().css({'filter': ''});
-        $('.mobi, .vina').children().css({'filter': 'grayscale(100%)'});
+        $(this).children().css({ 'filter': '' });
+        $('.mobi, .vina').children().css({ 'filter': 'grayscale(100%)' });
         $('.mobi, .vina').removeClass('bor-col-red');
     });
 
-    $('.vina').click(function(){
+    $('.vina').click(function () {
         $(this).addClass('bor-col-red');
-        $(this).children().css({'filter': ''});
-        $('.mobi, .viettel').children().css({'filter': 'grayscale(100%)'});
+        $(this).children().css({ 'filter': '' });
+        $('.mobi, .viettel').children().css({ 'filter': 'grayscale(100%)' });
         $('.mobi, .viettel').removeClass('bor-col-red');
 
     });
 
-    $('.mobi').click(function(){
+    $('.mobi').click(function () {
         $(this).addClass('bor-col-red');
-        $(this).children().css({'filter': ''});
-        $('.viettel, .vina').children().css({'filter': 'grayscale(100%)'});
+        $(this).children().css({ 'filter': '' });
+        $('.viettel, .vina').children().css({ 'filter': 'grayscale(100%)' });
         $('.viettel, .vina').removeClass('bor-col-red');
 
     });

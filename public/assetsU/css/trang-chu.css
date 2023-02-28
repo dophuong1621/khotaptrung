@@ -404,6 +404,11 @@
         height: 600px;
     }
 
+    .t-sm{
+        font-size: .875rem !important;
+        line-height: 1.25rem !important;
+    }
+
     .sk-new{
         padding-right: 2rem;
         padding-left: 2rem;

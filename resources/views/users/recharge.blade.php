@@ -32,7 +32,7 @@
                     <div class="mb-2">
                         <label class="text-sm"> Mệnh giá </label>
                         <select class="px-075 bor-1 br-025 w-100 h-25r bor-coler-be">
-                            <option disabled="disabled" value="">Chọn mệnh giá</option>
+                            <option disabled="disabled">Chọn mệnh giá</option>
                             <option class="fw-5 t-color" value="10000">
                                 10,000 VNĐ (nhận 100%)
                             </option>

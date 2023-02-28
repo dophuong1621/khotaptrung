@@ -8,7 +8,8 @@
                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                aria-current="true" aria-label="Slide 1" style="background-color: white; ">
+                            </button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
@@ -38,7 +39,7 @@
                         </div>
                         <div class="sk-new d-flex bg-box-gray">
                             <i class="fa-gift fa gift"></i>
-                            <button class="uppercase t-sk text-sm-lg text-sm fw-8">Sự kiện mới</button>
+                            <button class="uppercase t-sk text-lg fw-8 t-sm">Sự kiện mới</button>
                         </div>
                     </div>
                     <div class="content-h pt-2 pb-2 bg-box position-relative">
@@ -565,7 +566,7 @@
     </div>
     <script>
         $(window).load(function() {
-            $('.popup-login').css({
+            $('.popup-home').css({
                 'display': 'block'
             });
         })
