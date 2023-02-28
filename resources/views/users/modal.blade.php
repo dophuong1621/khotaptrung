@@ -244,10 +244,10 @@
                             </div>
                             <div class="gc-9">
                                 <p class="d-flex align-items-center">
-                                    <b class="me-1">ID:</b> 1650845
+                                    <b class="me-1">ID:</b><span id="id-user"> 1650845</span>
                                     <span
-                                        class="w-1 h-1 d-flex align-items-center justify-content-center ms-2 cursor-pointer"><i
-                                            class="bx bxs-copy"></i>
+                                        class="w-1 h-1 d-flex align-items-center justify-content-center ms-2 cursor-pointer" onclick="copyId('#id-user')">
+                                        <i class="bx bxs-copy"></i>
                                     </span>
                                 </p>
                                 <p class="text-sm"><b>Số dư:</b> <span class="t-color fw-7">0đ</span></p>

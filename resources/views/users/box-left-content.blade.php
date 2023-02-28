@@ -5,9 +5,11 @@
                 <img class="ava-l w-100 br-9999" src="/assetsU/image/unknown-avatar.jpg">
             </div>
             <div class="ava-r">
-                <p class="d-flex align-items-center p"><b class="me-1">ID:</b> 1650845
-                    <span class="justify-content-center align-items-center ic-cop d-flex ms-2">
-                        <i class="fas fa-copy"></i></span>
+                <p class="d-flex align-items-center p">
+                    <b class="me-1">ID:</b><span id="id-user"> 1650845</span>
+                    <span class="justify-content-center align-items-center ic-cop d-flex ms-2" onclick="copyId('#id-user')">
+                        <i class="fas fa-copy" ></i>
+                    </span>
                 </p>
                 <p class="text-sm p"><b>Số dư:</b> <span class="fw-bold t-color">0đ</span></p>
                 <p class="text-sm p"><b>Xu:</b> <span class="fw-bold t-color">0xu</span></p>
@@ -136,3 +138,15 @@
         </div>
     </div>
 </div>
+<script>
+    //copy ID
+    function copyId(e){
+        copied = $('#id-user').text();
+        var copy = $('<input>');
+        $('body').append(copy);
+        copy.val($(e).text()).select();
+        document.execCommand("copy");
+        copy.remove();
+        alert("Đã copy:" + copied);
+    }
+</script>

@@ -371,6 +371,10 @@ ul{
     border-width: 2px;
 }
 
+.bor-w-1{
+    border-width: 1px;
+}
+
 .grid-temp-col-12{
     grid-template-columns: repeat(12,minmax(0,1fr));
 }

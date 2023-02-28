@@ -18,13 +18,13 @@
                         <label class="text-sm">
                             Nhà mạng <b>(Ưu tiên Viettel, Vinaphone)</b></label>
                         <div class="text-sm gap-2 d-grid grid-temp-col-12">
-                            <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box">
+                            <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box viettel">
                                 <img style="filter: grayscale(100%); max-width: 100%; height: auto;" src="assetsU/image/viettel.png">
                             </button>
-                            <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box">
+                            <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box vina">
                                 <img style="filter: grayscale(100%); max-width: 100%; height: auto;" src="assetsU/image/vinaphone.png">
                             </button>
-                            <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box">
+                            <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box mobi">
                                 <img style="filter: grayscale(100%); max-width: 100%; height: auto;" src="assetsU/image/mobifone.png">
                             </button>
                         </div>

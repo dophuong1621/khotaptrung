@@ -110,29 +110,5 @@ $(document).ready(function () {
     //anh dong
     $('.close').click(function(){
         $('.animation').addClass('d-none');
-    });
-
-    // btn vina,mobi,viettel
-    $('.viettel').click(function(){
-        $(this).addClass('bor-col-red');
-        $(this).children().css({'filter': ''});
-        $('.mobi, .vina').children().css({'filter': 'grayscale(100%)'});
-        $('.mobi, .vina').removeClass('bor-col-red');
-    });
-
-    $('.vina').click(function(){
-        $(this).addClass('bor-col-red');
-        $(this).children().css({'filter': ''});
-        $('.mobi, .viettel').children().css({'filter': 'grayscale(100%)'});
-        $('.mobi, .viettel').removeClass('bor-col-red');
-
-    });
-
-    $('.mobi').click(function(){
-        $(this).addClass('bor-col-red');
-        $(this).children().css({'filter': ''});
-        $('.viettel, .vina').children().css({'filter': 'grayscale(100%)'});
-        $('.viettel, .vina').removeClass('bor-col-red');
-
-    });
+    })
 });
