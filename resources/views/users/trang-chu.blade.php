@@ -55,7 +55,9 @@
                                     <div class="fw-7 text-lg text-white">
                                         <span class="dx w-8r py-1 text-white br-025 text-center d-inline-block text-sm">
                                             3,300,000
-                                            <span class="text-xs"><small>đ</small></span></span>
+                                            <span class="text-xs"><small>đ</small>
+                                            </span>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="px-2 d-flex justify-content-between align-items-center mb-025">

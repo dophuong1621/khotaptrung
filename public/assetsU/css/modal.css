@@ -30,6 +30,17 @@
     width: 75%;
 }
 
+.modal-login{
+    position: relative;
+    margin: 0 auto 50px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+    box-sizing: border-box;
+    width: 50%;
+    max-width: 450px !important;
+}
+
 .modal-home {
     position: relative;
     margin: 0 auto 50px;
@@ -53,7 +64,15 @@
     font-size: 16px;
 }
 
-.ct-login {
+.login-body{
+    padding: 30px 20px;
+    color: #606266;
+    font-size: 14px;
+    word-break: break-all;
+    padding-top: 0!important;
+}
+
+.ct-home {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     padding: 30px 20px;
@@ -72,7 +91,7 @@
     box-sizing: border-box;
 }
 
-.tb-login {
+.tb-home,.login-header {
     padding: 20px 20px 10px;
 }
 
@@ -93,8 +112,14 @@
     font-weight: 500;
 }
 
+.login-title{
+    line-height: 24px;
+    font-size: 18px;
+    color: #303133;
+}
+
 .btn-menu-left,
-.popup-home {
+.popup-home, .popup-login {
     position: fixed;
     top: 0;
     right: 0;
@@ -122,6 +147,10 @@
     display: flex;
     margin-bottom: 32px;
     padding: 20px 20px 0;
+}
+
+.login-close{
+    color: #909399;
 }
 
 .modal-menu{

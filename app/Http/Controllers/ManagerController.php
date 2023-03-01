@@ -3,62 +3,126 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class ManagerController extends Controller
 {
 
     public function home()
     {
-        return view('users.trang-chu');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.trang-chu', [
+            'users' => $usersHead
+        ]);
     }
 
     public function recharge()
     {
-        return view('users.recharge');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.recharge', [
+            'users' => $usersHead
+        ]);
     }
 
-    public function repass()
-    {
-        return view('users.repass');
-    }
+    
     public function info()
     {
-        return view('users.info');
+        $sessionId = session()->get('id');
+        $users = User::where('id', $sessionId)->get();
+        return view('users.info', [
+            'users' => $users
+        ]);
     }
     public function notification()
     {
-        return view('users.notification');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.notification', [
+            'users' => $usersHead
+        ]);
     }
     public function withdrawItems()
     {
-        return view('users.withdraw-items');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.withdraw-items', [
+            'users' => $usersHead
+        ]);
     }
     public function voucher()
     {
-        return view('users.list-voucher');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.list-voucher', [
+            'users' => $usersHead
+        ]);
     }
     public function historyGame()
     {
-        return view('users.history.game');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.history.game', [
+            'users' => $usersHead
+        ]);
     }
     public function historyAddCard()
     {
-        return view('users.history.add_card');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.history.add_cart', [
+            'users' => $usersHead
+        ]);
     }
     public function historyTransaction()
     {
-        return view('users.history.transaction');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.history.transaction', [
+            'users' => $usersHead
+        ]);
     }
     public function historyBuyNick()
     {
-        return view('users.history.buy_nick');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.history.buy_nick', [
+            'users' => $usersHead
+        ]);
     }
     public function historyItems()
     {
-        return view('users.history.buy_item');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.history.buy_items', [
+            'users' => $usersHead
+        ]);
     }
     public function historyService()
     {
-        return view('users.history.service');
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.history.service', [
+            'users' => $usersHead
+        ]);
+    }
+
+    public function boxLeft()
+    {
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.box-left-content', [
+            'users' => $usersHead
+        ]);
+    }
+
+    public function modal()
+    {
+        $sessionId = session()->get('id');
+        $usersHead = User::where('id', $sessionId)->get();
+        return view('users.modal', [
+            'users' => $usersHead
+        ]);
     }
 }

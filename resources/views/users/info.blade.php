@@ -13,7 +13,7 @@
                             </div>
                             <div class="gc-9 d-flex align-items-center">
                                 <div class="ms-2">
-                                    <p><b>ID:</b> 1650845</p>
+                                    <p><b>ID:</b> {{ $users[0]->id }}</p>
                                     <p class="text-base"><b>Số dư:</b> <span class="t-color fw-7">0đ</span>
                                     </p>
                                 </div>
@@ -24,32 +24,37 @@
                         <div class="fw-6 px-075 py-2 bg-box br-025 gap-2 grid-temp-col-12 d-grid mb-1">
                             <div class="gc-5">Tên Tài Khoản</div>
                             <div class="gc-7">
-                                jirim162
+                                {{ $users[0]->username }}
                             </div>
                         </div>
                         <div class="fw-6 px-075 py-2 bg-box br-025 gap-2 grid-temp-col-12 d-grid mb-1">
                             <div class="gc-5">Số Điện Thoại</div>
                             <div class="gc-7">
-                                0522901601
+                                {{ $users[0]->phone }}
+
                             </div>
                         </div>
                         <div class="fw-6 px-075 py-2 bg-box br-025 gap-2 grid-temp-col-12 d-grid mb-1">
                             <div class="gc-5">Email</div>
                             <div class="gc-7">
-                                ----------
+                                {{ $users[0]->email ?? '———' }}
                             </div>
                         </div>
                         <div class="fw-6 px-075 py-2 bg-box br-025 gap-2 grid-temp-col-12 d-grid mb-1">
                             <div class="gc-5">Ngày Tham Gia</div>
                             <div class="gc-7">
-                                22/02/2023 15:13:16
+                                {{ $users[0]->created_at }}
                             </div>
                         </div>
                         <div class="fw-6 px-075 py-2 bg-box br-025 gap-2 grid-temp-col-12 d-grid mb-1">
                             <div class="gc-5 d-flex align-items-center">Thoát</div>
-                            <div class="gc-7"><button class="fw-7 text-xs py-1 px-2 br-025 text-white dx">
-                                    Đăng xuất
-                                </button></div>
+                            <div class="gc-7">
+                                <button class="fw-7 text-xs py-1 px-2 br-025 text-white dx">
+                                    <a href="{{ route('logout') }}" class="text-white">
+                                        Đăng xuất
+                                    </a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

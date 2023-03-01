@@ -38,7 +38,7 @@
     top: 16px;
 }
 
-.el-dialog__headerbtn {
+.el-dialog__headerbtn, .login-headerbtn {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -226,6 +226,10 @@ th {
     font-weight: 500;
 }
 
+.mb-2r{
+    margin-bottom: 2rem !important;
+}
+
 .fw-6{
     font-weight: 600;
 }
@@ -236,6 +240,10 @@ th {
 
 .fw-8{
     font-weight: 800;
+}
+
+.mt-125r{
+    margin-top: 1.25rem;
 }
 
 .t-color{
@@ -261,6 +269,10 @@ th {
 
 .ml-275 {
     margin-left: 2.75rem;
+}
+
+.ml-2r{
+    margin-left: 2rem;
 }
 
 .ml-05{
@@ -402,12 +414,24 @@ ul{
     background-color: #22c55e !important;
 }
 
+.bg-greenn{
+    background-color: #22c55e;
+}
+
 .bor-1{
     border-width: 1px;
 }
 
 .bor-1{
     border: 1px solid #d4d4d4;
+}
+
+.bor-1-red{
+    border: 1px solid red;
+}
+
+.bor-1-green{
+    border: 1px solid green;
 }
 
 .w-25r{
@@ -438,8 +462,12 @@ ul{
     height: 2.5rem;
 }
 
+.h-275r{
+    height: 2.75rem;
+}
+
 .h-2r{
-    height: 2.5rem;
+    height: 2rem;
 }
 
 .h-16r{
@@ -448,6 +476,18 @@ ul{
 
 .bor-col-red{
     border-color: red;
+}
+
+.bg-blue{
+    background-color: #1D4ED8;
+}
+
+.text-blue{
+    color: #1D4ED8;
+}
+
+.bor-1-col-blue{
+    border: 1px solid #1d4ed8;
 }
 
 .border-dashed {
@@ -480,6 +520,11 @@ ul{
     line-height: 1.75rem;
 }
 
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
 .ls-0025{
     letter-spacing: 0.025rem;
 }
@@ -510,12 +555,28 @@ ul{
     height: 3rem;
 }
 
+.h-4r{
+    height: 4rem;
+}
+
 .h-15r{
     height: 1.5rem;
 }
 
 .bg-gray{
     background-color: gray;
+}
+
+.border-gray{
+    border-color: gray;
+}
+
+.text-gray{
+    color: gray;
+}
+
+.text-green{
+    color: green;
 }
 
 .border-0{

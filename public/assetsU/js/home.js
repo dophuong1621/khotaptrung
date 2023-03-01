@@ -87,7 +87,7 @@ $(document).ready(function () {
         }
     });
 
-    // popup login
+    // popup home
     $(window).on('click', function (e) {
         if ($(e.target).is('.popup-home')) {
             $('.popup-home').css({ 'display': 'none' });
@@ -135,6 +135,26 @@ $(document).ready(function () {
         $(this).children().css({ 'filter': '' });
         $('.viettel, .vina').children().css({ 'filter': 'grayscale(100%)' });
         $('.viettel, .vina').removeClass('bor-col-red');
+    });
 
+    //sigin, sigup
+    $('.ct-login').click(function(){
+        $('.sigup').css({'display': 'none'});
+        $('.sigin').css({'display': 'block'});
+    });
+
+    $('.ct-regis').click(function(){
+        $('.sigup').css({'display': 'block'});
+        $('.sigin').css({'display': 'none'});
+    });
+
+    $('.btn-login').click(function(){
+       $('.popup-login').css({'display':'block'});
+    });
+
+    $(window).on('click', function (e) {
+        if ($(e.target).is('.popup-login')) {
+            $('.popup-login').css({ 'display': 'none' });
+        }
     });
 });

@@ -6,9 +6,10 @@
             </div>
             <div class="ava-r">
                 <p class="d-flex align-items-center p">
-                    <b class="me-1">ID:</b><span id="id-user"> 1650845</span>
-                    <span class="justify-content-center align-items-center ic-cop d-flex ms-2" onclick="copyId('#id-user')">
-                        <i class="fas fa-copy" ></i>
+                    <b class="me-1">ID:</b><span id="id-user"> {{ $users[0]->id }}</span>
+                    <span class="justify-content-center align-items-center ic-cop d-flex ms-2"
+                        onclick="copyId('#id-user')">
+                        <i class="fas fa-copy"></i>
                     </span>
                 </p>
                 <p class="text-sm p"><b>Số dư:</b> <span class="fw-bold t-color">0đ</span></p>
@@ -140,7 +141,7 @@
 </div>
 <script>
     //copy ID
-    function copyId(e){
+    function copyId(e) {
         copied = $('#id-user').text();
         var copy = $('<input>');
         $('body').append(copy);
