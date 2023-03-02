@@ -3,7 +3,7 @@
         <div class="container-h">
             <div class="header d-flex">
                 <div class="h-left d-flex flex-item-cent">
-                    <a href="trang-chu" class="h-img">
+                    <a href="home" class="h-img">
                         <img src="https://cdns.diongame.com/static/image-87a3f611-cc43-4bc6-a047-a5de520ad6b6.png"
                             class="h-img1">
                         <img src="https://cdns.diongame.com/static/image-49572b34-c8b0-40df-8d04-13c44741d328.png"

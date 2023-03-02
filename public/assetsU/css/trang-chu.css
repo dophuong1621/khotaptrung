@@ -391,6 +391,9 @@
 }
 
 @media screen and (max-width: 415px) {
+    .text-tk{
+        height: 9rem;
+    }
 
     .box1 {
         margin-bottom: 1rem !important;

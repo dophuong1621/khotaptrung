@@ -1,4 +1,7 @@
 @extends('users.layouts_user.home')
+@php
+    $color = ['top1', 'top2', 'top3', 'top4', 'top4'];
+@endphp
 @section('content')
     <div class="main-content">
         <div class="content">
@@ -46,21 +49,25 @@
                         <div class="t-ct-h d-flex justify-content-center d-none">Chưa có thông báo mới</div>
                         <div class="nt-ct-h">
                             <div class="nt-top overflow-auto mb-3">
-                                <div class="px-2 d-flex justify-content-between align-items-center mb-025">
-                                    <div class="topl d-flex">
-                                        <i class="bi-octagon-fill bi top1 position-relative"><span
-                                                class="text-white nub-top">1</span></i>
-                                        <span class="nub fw-7">ID 1633630</span>
-                                    </div>
-                                    <div class="fw-7 text-lg text-white">
-                                        <span class="dx w-8r py-1 text-white br-025 text-center d-inline-block text-sm">
-                                            3,300,000
-                                            <span class="text-xs"><small>đ</small>
+                                @foreach ($topNap as $tn => $value)
+                                    <div class="px-2 d-flex justify-content-between align-items-center mb-025">
+                                        <div class="topl d-flex">
+                                            <i
+                                                class="bi-octagon-fill bi position-relative {{ $color[$tn] ? $color[$tn] : '' }}">
+                                                <span class="text-white nub-top">{{ $tn + 1 }}</span>
+                                            </i>
+                                            <span class="nub fw-7">ID {{ $value->idkey }}</span>
+                                        </div>
+                                        <div class="fw-7 text-lg text-white">
+                                            <span class="dx w-8r py-1 text-white br-025 text-center d-inline-block text-sm">
+                                                {{ number_format($value->price, 0, ',', ',') }}
+                                                <span class="text-xs"><small>đ</small>
+                                                </span>
                                             </span>
-                                        </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="px-2 d-flex justify-content-between align-items-center mb-025">
+                                @endforeach
+                                {{-- <div class="px-2 d-flex justify-content-between align-items-center mb-025">
                                     <div class="topl d-flex">
                                         <i class="bi-octagon-fill bi top2 position-relative"><span
                                                 class="text-white nub-top">2</span></i>
@@ -107,7 +114,7 @@
                                             1,360,000
                                             <span class="text-xs"><small>đ</small></span></span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="border-b mt-1 mb-2 mx-auto"></div>
                             <div class="ntt">
@@ -139,26 +146,28 @@
                     <h3 class="uppercase t-box fw-7">dịch vụ roblox uy tín</h3>
                 </div>
                 <div class="ct-tk">
-                    <div class="ct-box bg-box col">
-                        <a href="#" class="tk">
-                            <div class="img-tk">
-                                <img src="https://cdns.diongame.com/static/image-276ce799-cb65-49fe-bcfd-698b74f65041.gif"
-                                    class="im-tk">
-                            </div>
-                            <div class="text-tk">
-                                <h4 class="title-tk uppercase fw-6">dịch vụ mua robux vip</h4>
-                                <div class="mb-025 ct-t-tk">
-                                    <span class="db-tk">Đã bán: <b class="t-color">11k</b></span>
+                    @foreach ($reputation as $rep)
+                        <div class="ct-box bg-box col">
+                            <a href="#" class="tk">
+                                <div class="img-tk">
+                                    <img src="{{ $rep->image }}" class="im-tk">
                                 </div>
-                                <div class="sale mt-2">
-                                    <button class="t-sale">
-                                        <span>Rẻ nhất thị trường</span>
-                                    </button>
+                                <div class="text-tk">
+                                    <h4 class="title-tk uppercase fw-6">{{ $rep->title }}</h4>
+                                    <div class="mb-025 ct-t-tk">
+                                        <span class="db-tk">Đã bán: <b
+                                                class="t-color">{{ round(number_format($rep->params, 0, '.', '.'), 1) }}k</b></span>
+                                    </div>
+                                    <div class="sale mt-2">
+                                        <button class="t-sale">
+                                            <span>{{ $rep->description }}</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ct-box bg-box col">
+                            </a>
+                        </div>
+                    @endforeach
+                    {{-- <div class="ct-box bg-box col">
                         <a href="#" class="tk">
                             <div class="img-tk">
                                 <img src="https://cdns.diongame.com/static/image-fef42ab4-6850-47ac-97fc-2b17d262d4bb.gif"
@@ -195,7 +204,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- box4 --}}
@@ -204,29 +213,33 @@
                     <h3 class="uppercase t-box fw-7">danh mục tài khoản siêu ngon</h3>
                 </div>
                 <div class="ct-tk">
-                    <div class="ct-box bg-box col b-shadow">
-                        <a href="#" class="tk">
-                            <div class="img-tk">
-                                <img src="https://cdns.diongame.com/static/image-d5695765-46bc-40c8-bee5-a9ca2ca4b5b1.gif"
-                                    class="im-tk">
-                            </div>
-                            <div class="text-tk">
-                                <h4 class="title-tk uppercase fw-6">acc roblox tự chọn</h4>
-                                <div class="mb-025 ct-t-tk mb-025">
-                                    <span class="db-tk">Đã bán: <b class="t-color">105.7k</b></span>
+                    @foreach ($superDeliciousAccount as $sdc)
+                        <div class="ct-box bg-box col b-shadow">
+                            <a href="#" class="tk">
+                                <div class="img-tk">
+                                    <img src="{{ $sdc->image }}" class="im-tk">
                                 </div>
-                                <div class="sale mt-2">
-                                    <button class="btn-t-sale">
-                                        <span>200.000đ</span>
-                                    </button>
-                                    <button class="t-sale ">
-                                        <span>Giảm giá 50%</span>
-                                    </button>
+                                <div class="text-tk">
+                                    <h4 class="title-tk uppercase fw-6">{{ $sdc->title }}</h4>
+                                    <div class="mb-025 ct-t-tk mb-025">
+                                        <span class="db-tk">Đã bán: <b
+                                                class="t-color">{{ round(number_format($sdc->params, 0, '.', '.'), 1) }}k</b></span>
+                                    </div>
+                                    <div class="sale mt-2">
+                                        @if ($sdc->price_old)
+                                            <button class="btn-t-sale">
+                                                {{ $sdc->price_old ? number_format($sdc->price_old, 0, '.', '.') : '' }}đ
+                                            </button>
+                                        @endif
+                                        <button class="t-sale ">
+                                            {{ $sdc->description ? $sdc->description : number_format($sdc->price, 0, '.', '.'). 'đ' }}
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ct-box bg-box col b-shadow">
+                            </a>
+                        </div>
+                    @endforeach
+                    {{-- <div class="ct-box bg-box col b-shadow">
                         <a href="#" class="tk">
                             <div class="img-tk">
                                 <img src="https://cdns.diongame.com/static/image-cd6358f9-0883-4f8c-92bf-c937d2b3794c.gif"
@@ -436,7 +449,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- box5 --}}
@@ -445,26 +458,28 @@
                     <h3 class="uppercase t-box fw-7">trò chơi khuyến mãi nhân dịp khai trương</h3>
                 </div>
                 <div class="ct-tk">
-                    <div class="ct-box bg-box col b-shadow">
-                        <a href="#" class="tk">
-                            <div class="img-tk">
-                                <img src="https://cdns.diongame.com/static/image-3b242b5c-46af-489a-9b3e-381fd9ce988e.gif"
-                                    class="im-tk">
-                            </div>
-                            <div class="text-tk">
-                                <h4 class="title-tk uppercase fw-6">vòng quay nổ hũ</h4>
-                                <div class="mb-025 ct-t-tk">
-                                    <span class="db-tk">Đã bán: <b class="t-color">81.3k</b></span>
+                    @foreach ($openingGame as $og)
+                        <div class="ct-box bg-box col b-shadow">
+                            <a href="#" class="tk">
+                                <div class="img-tk">
+                                    <img src="{{ $og->image }}" class="im-tk">
                                 </div>
-                                <div class="sale mt-2">
-                                    <button class="t-sale ">
-                                        <span>12.000 Tỉ lệ trúng robux siêu cao</span>
-                                    </button>
+                                <div class="text-tk">
+                                    <h4 class="title-tk uppercase fw-6">{{ $og->title }}</h4>
+                                    <div class="mb-025 ct-t-tk">
+                                        <span class="db-tk">Đã bán: <b
+                                                class="t-color">{{ round(number_format($og->params, 0, '.', '.'), 1) }}k</b></span>
+                                    </div>
+                                    <div class="sale mt-2">
+                                        <button class="t-sale ">
+                                            <span>{{ $og->description }}</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ct-box bg-box col b-shadow">
+                            </a>
+                        </div>
+                    @endforeach
+                    {{-- <div class="ct-box bg-box col b-shadow">
                         <a href="#" class="tk">
                             <div class="img-tk">
                                 <img src="https://cdns.diongame.com/static/image-a2a7b13a-6d42-427b-876f-abed673c0f8b.gif"
@@ -520,7 +535,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- box6 --}}
@@ -529,25 +544,27 @@
                     <h3 class="uppercase t-box fw-7">danh mục tài khoản game khác</h3>
                 </div>
                 <div class="ct-tk">
-                    <div class="ct-box bg-box col">
-                        <a href="#" class="tk">
-                            <div class="img-tk">
-                                <img src="https://cdns.diongame.com/static/image-91c07ba2-9d01-4fdf-aec9-913f39c215ae.gif"
-                                    class="im-tk">
-                            </div>
-                            <div class="text-tk">
-                                <h4 class="title-tk uppercase fw-6">danh mục game liên quân</h4>
-                                <div class="mb-025 ct-t-tk">
-                                    <span class="db-tk">Đã bán: <b class="t-color">23.9k</b></span>
+                    @foreach ($ortherGame as $otg)
+                        <div class="ct-box bg-box col">
+                            <a href="#" class="tk">
+                                <div class="img-tk">
+                                    <img src="{{ $otg->image }}" class="im-tk">
                                 </div>
-                                <div class="sale mt-2">
-                                    <button class="t-sale">
-                                        <span>Siêu giảm giá</span>
-                                    </button>
+                                <div class="text-tk">
+                                    <h4 class="title-tk uppercase fw-6">{{ $otg->title }}</h4>
+                                    <div class="mb-025 ct-t-tk">
+                                        <span class="db-tk">Đã bán: <b
+                                                class="t-color">{{ round(number_format($otg->params, 0, '.', '.'), 1) }}k</b></span>
+                                    </div>
+                                    <div class="sale mt-2">
+                                        <button class="t-sale">
+                                            <span>{{ $otg->description }}</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             {{-- animation --}}

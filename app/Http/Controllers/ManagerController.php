@@ -7,16 +7,6 @@ use App\Models\User;
 
 class ManagerController extends Controller
 {
-
-    public function home()
-    {
-        $sessionId = session()->get('id');
-        $usersHead = User::where('id', $sessionId)->get();
-        return view('users.trang-chu', [
-            'users' => $usersHead
-        ]);
-    }
-
     public function recharge()
     {
         $sessionId = session()->get('id');
@@ -26,7 +16,7 @@ class ManagerController extends Controller
         ]);
     }
 
-    
+
     public function info()
     {
         $sessionId = session()->get('id');
