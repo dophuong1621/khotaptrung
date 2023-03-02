@@ -22,15 +22,26 @@ class RechargeController extends Controller
     {
         $input = $request->all();
         $result = false;
-        $message = 'Không được để trống';
-        if ($input != '') {
-            // dd('sss');
-            $input = $request->all();
-            $input['user_id'] = session('id');
-            $user = Recharge::create($input);
+        $message = 'Bạn chưa chọn nhà mạng';
+        if ($request->type_charge != '') {
+            $result = false;
+            $message = 'Bạn chưa chọn mệnh giá thẻ';
+            if ($request->money_received != '') {
+                $result = false;
+                $message = 'Bạn chưa nhập mã thẻ';
+                if ($request->pin != '') {
+                    $result = false;
+                    $message = 'Bạn chưa nhập số serial';
+                    if ($request->serial != '') {
+                        $input = $request->all();
+                        $input['user_id'] = session('id');
+                        $user = Recharge::create($input);
 
-            $result = true;
-            $message = 'Nạp thẻ thành công!';
+                        $result = true;
+                        $message = 'Nạp thẻ thành công!';
+                    }
+                }
+            }
         }
         return response()->json([
             'result' => $result,

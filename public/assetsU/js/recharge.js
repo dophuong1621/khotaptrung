@@ -21,7 +21,6 @@ $(document).ready(function () {
                     alert(message);
                 }
                 else {
-                    alert(message);
                     var htmlPop = '';
                     htmlPop += '<div class="t-color fw-6 text-sm py-2 px-075 bg-color br-025 w-100 d-block bor-1-red">';
                     htmlPop += message;

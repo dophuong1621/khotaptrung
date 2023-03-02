@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Recharge;
 use App\Http\Controllers\Controller;
 use App\Models\Recharge;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class AutoController extends Controller
 {
@@ -15,12 +16,11 @@ class AutoController extends Controller
      */
     public function index(Request $request)
     {
-        $search = $request->get('search');
-        $garage = Recharge::where('title', 'like', '%' . $search . '%')->orderBy('id','ASC')->get();
-        // dd($garage);
-        // return view('item/garage.index',[
-        //     'garage' => $garage
-        // ]);
+        $index = Recharge::orderBy('id', 'ASC')->get();
+        // dd($index);
+        return view('recharge/auto.index', [
+            'index' => $index
+        ]);
     }
 
     /**
@@ -30,7 +30,7 @@ class AutoController extends Controller
      */
     public function create()
     {
-        //
+        return view('recharge.auto.create');
     }
 
     /**
@@ -41,7 +41,10 @@ class AutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $user = Recharge::create($input);
+
+        return Redirect::route('recharge-auto.index');
     }
 
     /**
