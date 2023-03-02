@@ -7,16 +7,6 @@ use App\Models\User;
 
 class ManagerController extends Controller
 {
-    public function recharge()
-    {
-        $sessionId = session()->get('id');
-        $usersHead = User::where('id', $sessionId)->get();
-        return view('users.recharge', [
-            'users' => $usersHead
-        ]);
-    }
-
-
     public function info()
     {
         $sessionId = session()->get('id');

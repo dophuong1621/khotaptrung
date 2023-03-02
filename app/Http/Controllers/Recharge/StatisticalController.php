@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Recharge;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Recharge;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
-class UserController extends Controller
+class StatisticalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,14 +15,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $search = $request->get('search');
-        $user = User::orderBy('id', 'ASC')
-            // ->where('fullname', 'like', '%' . $search . '%')
-            ->paginate(3);
-        // dd($user);
-        return view('user.index', [
-            'user' => $user
-        ]);
+
     }
 
     /**
@@ -33,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        //
     }
 
     /**
@@ -44,9 +36,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        User::create($input);
-        return Redirect::route('user.index');
+        //
     }
 
     /**
@@ -68,12 +58,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::where('id', '=', $id)
-            ->first();
-        // dd($user);
-        return view('user.edit', [
-            'user' => $user,
-        ]);
+        //
     }
 
     /**
@@ -85,10 +70,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $input = $request->all();
-        $user->update($input);
-        return Redirect::route('user.index');
+        //
     }
 
     /**
@@ -99,7 +81,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::where('id', $id)->firstorfail()->delete();
-        return Redirect::route('user.index');
+        //
     }
 }

@@ -12,6 +12,8 @@ class HomeController extends Controller
     {
         $sessionId = session()->get('id');
         $usersHead = User::where('id', $sessionId)->get();
+
+        // dd($usersHead);
         //box 1
         $top_nap = Item::where('module', 'top_nap')
             ->limit(5)

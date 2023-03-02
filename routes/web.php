@@ -6,6 +6,7 @@ use App\Http\Controllers\Bus\CategoryController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChangePassController;
+use App\Http\Controllers\RechargeController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Middleware\CheckLogged;
@@ -32,8 +33,8 @@ Route::middleware([CheckLogged::class])->group(function () {
 Route::middleware([CheckLogin::class])->group(function () {
     Route::GET('logout', [LoginController::class, 'logout'])->name('logout');
 
-
-    Route::GET('recharge', [ManagerController::class, 'recharge'])->name('recharge');
+    Route::GET('recharge', [RechargeController::class, 'recharge'])->name('recharge');
+    Route::POST('recharge-prs', [RechargeController::class, 'rechargePrs'])->name('rechargePrs');
     Route::GET('repassword', [ChangePassController::class, 'repass'])->name('repass');
     Route::POST('repassword', [ChangePassController::class, 'updatePass'])->name('updatePass');
     Route::GET('info', [ManagerController::class, 'info'])->name('info');
@@ -49,6 +50,8 @@ Route::middleware([CheckLogin::class])->group(function () {
     Route::GET('history/service', [ManagerController::class, 'historyService'])->name('historyService');
 });
 
+
+                                            //  Admin
 //bus
 Route::resource('bus-item', ItemController::class);
 Route::resource('bus-category', CategoryController::class);
@@ -60,6 +63,10 @@ Route::resource('driver-category', \App\Http\Controllers\Driver\CategoryControll
 //garage
 Route::resource('garage-item', \App\Http\Controllers\Garage\ItemController::class);
 Route::resource('garage-category', \App\Http\Controllers\Garage\CategoryController::class);
+
+//recharge
+Route::resource('recharge-auto', \App\Http\Controllers\Recharge\AutoController::class);
+Route::resource('recharge-statistical', \App\Http\Controllers\Recharge\StatisticalController::class);
 
 //user
 Route::resource('user', \App\Http\Controllers\User\UserController::class);

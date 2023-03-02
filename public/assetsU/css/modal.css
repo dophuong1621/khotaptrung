@@ -150,7 +150,7 @@
 }
 
 .login-close{
-    color: #909399;
+    color: #909399 !important;
 }
 
 .modal-menu{

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Exception;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
@@ -18,16 +19,20 @@ class LoginController extends Controller
         $message = 'Không được để trống';
         // dd(md5($password));die();
         if ($userName != '' && $password != '') {
-            $login = User::where(['password' => md5($password), 'username' => $userName])->first();
+            $login = User::where('username', $userName)->first();
             if (!$login) {
                 $result = false;
-                $message = 'Sai tên đăng nhập hoặc mật khẩu!';
+                $message = 'Sai tên đăng nhập!';
             } else {
-                $request->session()->put('id', $login->id);
-                $request->session()->put('username', $login->username);
+                $result = false;
+                $message = 'Sai mật khẩu!';
+                if (Hash::check($password, $login->password)) {
+                    $request->session()->put('id', $login->id);
+                    $request->session()->put('username', $login->username);
 
-                $result = true;
-                $message = 'Đăng nhập thành công';
+                    $result = true;
+                    $message = 'Đăng nhập thành công';
+                }
             }
         }
         return response()->json([

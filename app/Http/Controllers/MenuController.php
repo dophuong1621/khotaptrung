@@ -10,6 +10,7 @@ class MenuBooking extends Controller
     {
         $sessionId = session()->get('id');
         $usersHead = User::where('id', $sessionId)->get();
+
         return view('layouts_user.header', [
             'users' => $usersHead,
         ]);

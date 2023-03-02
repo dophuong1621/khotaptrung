@@ -459,7 +459,7 @@
         <div class="login-header">
             <span class="login-title"></span>
             <button type="button" class="login-headerbtn">
-                <i class="login-close el-icon el-icon-close"></i>
+                <i class="login-close el-dialog__close el-icon btn-close"></i>
             </button>
         </div>
         <div class="login-body">

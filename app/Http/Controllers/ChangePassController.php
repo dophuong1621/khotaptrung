@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Exception;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
 class ChangePassController extends Controller
@@ -21,17 +22,16 @@ class ChangePassController extends Controller
 
     public function updatePass(Request $request)
     {
-        $curPass = $request->get('currentPass');
         $id = session('id');
-        $userPass = User::find($id);
-
-        if (md5($curPass) == ($userPass->password)) {
-            $update = User::find($id);
-            $update->password = md5($request->rePassword);
-            $update->save();
+        $user = User::find($id);
+        if(Hash::check($request->currentPass,$user->password)){
+            $user->password = Hash::make($request->password);
+            $user->save();
             return back()->with("success", "Password changed successfully!");
-        } else {
+        }
+        else{
             return back()->with('error', 'Sai mật khẩu cũ ');
         }
+
     }
 }

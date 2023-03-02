@@ -152,6 +152,10 @@ $(document).ready(function () {
        $('.popup-login').css({'display':'block'});
     });
 
+    $('.login-close').click(function(){
+        $('.popup-login').css({'display':'none'});
+     });
+
     $(window).on('click', function (e) {
         if ($(e.target).is('.popup-login')) {
             $('.popup-login').css({ 'display': 'none' });
