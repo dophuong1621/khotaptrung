@@ -256,7 +256,7 @@
                                 </span>
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="{{route('garage-item.index')}}" class="menu-link menu-toggle">
+                                <a href="{{route('recharge-auto.index')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
@@ -264,7 +264,7 @@
                                 </a>
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="{{route('garage-category.index')}}" class="menu-link menu-toggle">
+                                <a href="{{route('recharge-statistical.index')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
