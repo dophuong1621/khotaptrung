@@ -1,4 +1,8 @@
 @extends('users.layouts_user.home')
+@php
+    $type = ['Viettel', 'Vinaphone', 'Mobifone'];
+
+@endphp
 @section('content')
     <div>
         <div class="px-2 gap-2 ct d-grid mx-auto">
@@ -26,13 +30,13 @@
                                     <img style="filter: grayscale(100%); max-width: 100%; height: auto;"
                                         src="assetsU/image/viettel.png">
                                 </button>
-                                <button type="button"
-                                    class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box vina" data-type="1">
+                                <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box vina"
+                                    data-type="1">
                                     <img style="filter: grayscale(100%); max-width: 100%; height: auto;"
                                         src="assetsU/image/vinaphone.png">
                                 </button>
-                                <button type="button"
-                                    class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box mobi" data-type="2">
+                                <button type="button" class="fw-7 px-075 br-025 bor-1 gc-4 h-25r bg-box mobi"
+                                    data-type="2">
                                     <img style="filter: grayscale(100%); max-width: 100%; height: auto;"
                                         src="assetsU/image/mobifone.png">
                                 </button>
@@ -98,9 +102,9 @@
                         <h2 class="fw-6 text-lg">Thẻ Nạp Gần Nhất</h2>
                     </div>
                     <div id="list" class="padding-1r p-05r">
-                        <table class="tb-tn w-100">
+                        <table class="w-100">
                             <thead>
-                                <tr class="tr-table-tn fw-6">
+                                <tr class="tr-table-tn fw-6 tb-tn">
                                     <th class="px-2 py-2 ">Thẻ Nạp</th>
                                     <th class="px-2 py-2">
                                         <span class="d-sm-block d-none">Mã thẻ/Seri</span>
@@ -111,7 +115,13 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="   "></tbody>
+                            <tbody class="recharge-ct">
+                                <tr @foreach ($recharge as $rc)>
+                                    <th class="px-2 py-2">{{ $type[$rc->type_charge] }}</th>
+                                    <th class="px-2 py-2">{{ $rc->pin . '/' . $rc->serial }}</th>
+                                    <th class="px-2 py-2">{{ number_format($rc->money_received, 0, '.', '.') }} đ</th>
+                                </tr @endforeach>
+                            </tbody>
                         </table>
                     </div>
                 </div>

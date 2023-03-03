@@ -204,11 +204,6 @@ th {
     text-align: -webkit-match-parent;
 }
 
-/*
-.content {
-    background: #000000;
-} */
-
 .d-flex{
     display: flex;
 }
@@ -244,6 +239,10 @@ th {
 
 .mt-125r{
     margin-top: 1.25rem;
+}
+
+.mt-25r{
+    margin-top: 2.5rem;
 }
 
 .t-color{
@@ -305,6 +304,10 @@ ul{
     padding: 0.5rem;
 }
 
+.padding-075r{
+    padding: 0.75rem;
+}
+
 .gc-12{
     grid-column: span 12/span 12;
 }
@@ -354,6 +357,15 @@ ul{
     padding-right: 1.25rem;
 }
 
+.px-25{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.br-0125{
+    border-radius: 0.125rem;
+}
+
 .br-025{
     border-radius: 0.25rem;
 }
@@ -374,6 +386,7 @@ ul{
 .border-bot-w-red{
     border-bottom: 2px solid #ef4444;
 }
+
 
 .border-w-2-gray{
     border: 2px solid #E5E5E5;
@@ -396,6 +409,14 @@ ul{
     padding-right: 0.75rem;
 }
 
+.bor-solid{
+    border-style: solid;
+}
+
+.pl-2r{
+    padding-left: 2rem;
+}
+
 .px-2r{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -412,6 +433,14 @@ ul{
 
 .bg-green:hover{
     background-color: #22c55e !important;
+}
+
+.z-i-50{
+    z-index: 50;
+}
+
+.top-35r{
+    top: 3.5rem;
 }
 
 .bg-greenn{
@@ -450,6 +479,10 @@ ul{
     height: 1rem;
 }
 
+.h-18r{
+    height: 18rem;
+}
+
 .pl-075{
     padding-left: 0.75rem;
 }
@@ -484,6 +517,11 @@ ul{
 
 .text-blue{
     color: #1D4ED8;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
 }
 
 .bor-1-col-blue{
@@ -565,6 +603,10 @@ ul{
 
 .bg-gray{
     background-color: gray;
+}
+
+.bor-gray{
+    border-color: #ede9e9;
 }
 
 .border-gray{

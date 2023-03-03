@@ -1,26 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Recharge;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Recharge;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Controller;
 
-class AutoController extends Controller
+class RobloxController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $index = Recharge::orderBy('id', 'ASC')->with('user')->get();
-        // dd($index);
-        return view('recharge/auto.index', [
-            'index' => $index
-        ]);
+        //
     }
 
     /**
@@ -30,7 +24,7 @@ class AutoController extends Controller
      */
     public function create()
     {
-        return view('recharge.auto.create');
+        //
     }
 
     /**
@@ -41,10 +35,7 @@ class AutoController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        $user = Recharge::create($input);
-
-        return Redirect::route('recharge-auto.index');
+        //
     }
 
     /**

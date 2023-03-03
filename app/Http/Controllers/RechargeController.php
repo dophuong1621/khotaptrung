@@ -13,8 +13,12 @@ class RechargeController extends Controller
     {
         $sessionId = session()->get('id');
         $usersHead = User::where('id', $sessionId)->get();
+        
+        $recharge = Recharge::where('user_id', $sessionId)->orderBy('id', 'desc')->limit(5)->get();
+
         return view('users.recharge', [
-            'users' => $usersHead
+            'users' => $usersHead,
+            'recharge' => $recharge
         ]);
     }
 
@@ -23,20 +27,26 @@ class RechargeController extends Controller
         $input = $request->all();
         $result = false;
         $message = 'Bạn chưa chọn nhà mạng';
+        $recharge = '';
         if ($request->type_charge != '') {
             $result = false;
             $message = 'Bạn chưa chọn mệnh giá thẻ';
+            $recharge = '';
             if ($request->money_received != '') {
                 $result = false;
                 $message = 'Bạn chưa nhập mã thẻ';
+                $recharge = '';
                 if ($request->pin != '') {
                     $result = false;
                     $message = 'Bạn chưa nhập số serial';
+                    $recharge = '';
+
                     if ($request->serial != '') {
                         $input = $request->all();
                         $input['user_id'] = session('id');
                         $user = Recharge::create($input);
 
+                        $recharge = Recharge::where('user_id', session('id'))->orderBy('id', 'desc')->limit(5)->get();
                         $result = true;
                         $message = 'Nạp thẻ thành công!';
                     }
@@ -46,6 +56,7 @@ class RechargeController extends Controller
         return response()->json([
             'result' => $result,
             'message' => $message,
+            'recharge' => $recharge
         ]);
     }
 }

@@ -368,6 +368,11 @@ p {
 }
 
 @media screen and (max-width: 415px) {
+
+    .h2r{
+        height: 2rem;
+    }
+    
     .gc-12i {
         grid-column: span 12/span 12;
     }

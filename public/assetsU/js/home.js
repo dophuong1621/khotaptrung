@@ -2,7 +2,7 @@ $(document).ready(function () {
     // $('.b1-sel').select2();
 
     var modal = $('.load-atm');
-    var btn = $('.atm');
+    var btn = $('.atm, .atm-post');
     var close = $('.btn-close');
 
     btn.click(function () {
@@ -95,7 +95,9 @@ $(document).ready(function () {
     });
 
     $('.ttb').click(function () {
-        $('.popup-home').css({ 'display': 'none' })
+        setTimeout(function () {
+            $('.popup-home').css({ 'display': 'none' })
+        }, 3000);
     });
 
     //box left
@@ -138,23 +140,23 @@ $(document).ready(function () {
     });
 
     //sigin, sigup
-    $('.ct-login').click(function(){
-        $('.sigup').css({'display': 'none'});
-        $('.sigin').css({'display': 'block'});
+    $('.ct-login').click(function () {
+        $('.sigup').css({ 'display': 'none' });
+        $('.sigin').css({ 'display': 'block' });
     });
 
-    $('.ct-regis').click(function(){
-        $('.sigup').css({'display': 'block'});
-        $('.sigin').css({'display': 'none'});
+    $('.ct-regis').click(function () {
+        $('.sigup').css({ 'display': 'block' });
+        $('.sigin').css({ 'display': 'none' });
     });
 
-    $('.btn-login').click(function(){
-       $('.popup-login').css({'display':'block'});
+    $('.btn-login').click(function () {
+        $('.popup-login').css({ 'display': 'block' });
     });
 
-    $('.login-close').click(function(){
-        $('.popup-login').css({'display':'none'});
-     });
+    $('.login-close').click(function () {
+        $('.popup-login').css({ 'display': 'none' });
+    });
 
     $(window).on('click', function (e) {
         if ($(e.target).is('.popup-login')) {

@@ -1,25 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Recharge;
+namespace App\Http\Controllers\Post;
 
-use App\Http\Controllers\Controller;
-use App\Models\Recharge;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Item;
 use Illuminate\Support\Facades\Redirect;
 
-class AutoController extends Controller
+class ListController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $index = Recharge::orderBy('id', 'ASC')->with('user')->get();
-        // dd($index);
-        return view('recharge/auto.index', [
-            'index' => $index
+        $post = Item::where('module', 'post')->get();
+        return view('post.index', [
+            'post' => $post,
         ]);
     }
 
@@ -30,7 +29,7 @@ class AutoController extends Controller
      */
     public function create()
     {
-        return view('recharge.auto.create');
+        return view('post.create');
     }
 
     /**
@@ -41,10 +40,17 @@ class AutoController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        $user = Recharge::create($input);
+        $data = $request->image;
+        $nameImage = $request->file('image')->getClientOriginalName();
+        $LuuAnh = 'assetsU/image/post';
+        $request->file('image')->move($LuuAnh, $nameImage);
 
-        return Redirect::route('recharge-auto.index');
+        $input = $request->all();
+        $input['image'] = $LuuAnh . '/' . $nameImage;
+        $input['module'] = 'post';
+        Item::create($input);
+
+        return Redirect::route('danh-sach-bai-viet.index');
     }
 
     /**

@@ -1,15 +1,11 @@
 @extends('layouts.app')
-@php
-    $type = ['Viettel', 'Vinaphone', 'Mobifone'];
-
-@endphp
 @section('content')
     <div class="card card-custom">
         <div class="card-header flex-wrap border-0 pt-6 pb-0">
             <div class="card-title">
-                <i class="text-dark-50 la la-bus" style="margin-right: 10px;"></i>
+                <i class="text-dark-50 la la-campground" style="margin-right: 10px;"></i>
                 <span>
-                    <h3 class="card-label">Recharge Auto</h3>
+                    <h3 class="card-label">Danh sách bài viết</h3>
                 </span>
             </div>
 
@@ -40,7 +36,8 @@
                     </div>
                 </div>
                 <div class="card-toolbar" style="position: absolute;right: 0px;padding: 25px;">
-                    <a href="{{ route('recharge-auto.create') }}" class="btn btn-primary font-weight-bolder">
+                    <!--begin::Button-->
+                    <a href="{{ route('danh-sach-bai-viet.create') }}" class="btn btn-primary font-weight-bolder">
                         <span class="svg-icon svg-icon-md">
                             <i class="ki ki-plus"></i>
                         </span>ADD
@@ -54,36 +51,32 @@
                 <thead>
                     <tr>
                         <th class="text-center">ID</th>
-                        <th class="text-center">Loại</th>
-                        <th class="text-center">Mệnh giá</th>
-                        <th class="text-center">Mã Thẻ</th>
-                        <th class="text-center">Số Serial</th>
-                        <th class="text-center">ID User</th>
-                        <th class="text-center">Username</th>
+                        <th class="text-center">Tiêu đề</th>
+                        <th class="text-center">Nội dung</th>
+                        <th class="text-center">Ảnh</th>
+                        <th class="text-center">Giá</th>
                         <th class="text-center">Create</th>
                         {{-- <th class="text-center">Action</th> --}}
                     </tr>
                 </thead>
                 <tbody>
                     <tr
-                        @foreach ($index as $i)>
-                    <td class="text-center">{{ $i->id }}</td>
-                    <td class="text-center">{{ $type[$i->type_charge] }} </td>
-                    <td class="text-center">{{ number_format($i->money_received, 0, '.', '.') }}đ</td>
-                    <td class="text-center">{{ $i->pin }}</td>
-                    <td class="text-center">{{ $i->serial }}</td>
-                    <td class="text-center">{{ $i->user_id ? $i->user_id : 'Vãng lai' }}</td>
-                    <td class="text-center">{{ $i->user[0]->username }}</td>
-                    <td class="text-center">{{ $i->created_at }}</td>
+                        @foreach ($post as $p)>
+                    <td class="text-center">{{ $p->id }}</td>
+                    <td class="text-center">{{ $p->title }}</td>
+                    <td class="text-center">{{ $p->content }}</td>
+                    <td class="text-center"><img src="{{ $p->image }}" style="width: 40px; height: 40px"></td>
+                    <td class="text-center">{{ number_format($p->price, 0, '.', '.') }} VNĐ</td>
+                    <td class="text-center">{{ $p->created_at }}</td>
                     {{-- <td>
                         <div class="td-actions text-center" style=" display: flex; justify-content: space-evenly;">
-                            <a rel="tooltip" href="" data-original-title="Edit">
+                            <a rel="tooltip" href="{{ route('garage-item.edit', $p->id) }}" data-original-title="Edit">
                                 <i class="flaticon2-pen ki text-primary"></i>
                             </a>
-                            <form action="">
-                                <button type="submit" class="closeU" style="border: 0px; background-color: white;color: red;">
-                                    <i class="ki-bold-close ki text-danger"></i>
-                                </button>
+                            <form method="post" action="{{route('garage-item.destroy',$p->id)}}">
+                                @method('delete')
+                                @csrf
+                                <button type="submit" class="closeU" style="border: 0px; background-color: white;color: red;"><i class="ki-bold-close ki text-danger"></i></button>
                             </form>
                         </div>
                     </td> --}}
@@ -92,7 +85,4 @@
             </table>
         </div>
     </div>
-    {{-- <div class="content">
-    <div class="row">
-</div> --}}
 @endsection

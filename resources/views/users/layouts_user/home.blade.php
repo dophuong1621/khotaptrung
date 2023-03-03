@@ -14,6 +14,7 @@
     <link href="{{ asset('assetsU') }}/css/trang-chu.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/box-right-content.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('assetsU') }}/css/modal.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assetsU') }}/css/post.css" rel="stylesheet" type="text/css">
     {{-- <link href="{{ asset('assetsU') }}/css/recharge.css" rel="stylesheet" type="text/css"> --}}
     {{-- <link href="{{ asset('assetsU') }}/css/withdraw-items.css" rel="stylesheet" type="text/css"> --}}
     {{-- <link href="{{ asset('assetsU') }}/css/list-voucher.css" rel="stylesheet" type="text/css"> --}}
@@ -55,6 +56,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assetsU/js/helper.js') }}"></script>
     <script src="{{ asset('assetsU/js/home.js') }}"></script>
     <script src="{{ asset('assetsU/js/login.js') }}"></script>
     <script src="{{ asset('assetsU/js/recharge.js') }}"></script>

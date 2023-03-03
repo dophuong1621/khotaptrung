@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Bus\ItemController;
-use App\Http\Controllers\Bus\CategoryController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ChangePassController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\RechargeController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -33,6 +32,11 @@ Route::middleware([CheckLogged::class])->group(function () {
 Route::middleware([CheckLogin::class])->group(function () {
     Route::GET('logout', [LoginController::class, 'logout'])->name('logout');
 
+    Route::name('post')->group(function () {
+        Route::GET('post', [PostController::class, 'listPost'])->name('listPost');
+        Route::GET('post/{id}', [PostController::class, 'showPost'])->name('showPost');
+    });
+
     Route::GET('recharge', [RechargeController::class, 'recharge'])->name('recharge');
     Route::POST('recharge-prs', [RechargeController::class, 'rechargePrs'])->name('rechargePrs');
     Route::GET('repassword', [ChangePassController::class, 'repass'])->name('repass');
@@ -51,10 +55,10 @@ Route::middleware([CheckLogin::class])->group(function () {
 });
 
 
-                                            //  Admin
+//  Admin
 //bus
-Route::resource('bus-item', ItemController::class);
-Route::resource('bus-category', CategoryController::class);
+Route::resource('bus-item', \App\Http\Controllers\Bus\ItemController::class);
+Route::resource('bus-category', \App\Http\Controllers\Bus\CategoryController::class);
 
 //driver
 Route::resource('driver-item', \App\Http\Controllers\Driver\ItemController::class);
@@ -67,6 +71,10 @@ Route::resource('garage-category', \App\Http\Controllers\Garage\CategoryControll
 //recharge
 Route::resource('recharge-auto', \App\Http\Controllers\Recharge\AutoController::class);
 Route::resource('recharge-statistical', \App\Http\Controllers\Recharge\StatisticalController::class);
+
+//post
+Route::resource('danh-sach-bai-viet', \App\Http\Controllers\Post\ListController::class);
+Route::resource('bai-viet/roblox-uy-tin', \App\Http\Controllers\Post\RobloxController::class);
 
 //user
 Route::resource('user', \App\Http\Controllers\User\UserController::class);

@@ -119,18 +119,18 @@
                                                 </a>
                                             </div>
                                             <div class="padding-05r">
-                                                <button class="text-white dx fw-6 text-center py-1 br-025 w-100">
-                                                    <a href="{{ route('logout') }}" class="text-white">
+                                                <a href="{{ route('logout') }}" class="text-white">
+                                                    <button class="text-white dx fw-6 text-center py-1 br-025 w-100">
                                                         Đăng xuất
-                                                    </a>
-                                                </button>
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <span class="el-popover__reference-wrapper">
                                     <button
-                                        class="pl-075 h-25r text-sm fw-6 br-05 align-items-center d-flex position-relative dx pr-2 h-25r btn-inf"
+                                        class="pl-075 h-25r text-sm fw-6 br-05 align-items-center d-flex position-relative dx pr-2 h-25r btn-inf h2r"
                                         style="min-width:4rem;" aria-describedby="el-popover-1422" tabindex="0">
                                         <span>
                                             <img src="/assetsU/image/unknown-avatar.jpg"

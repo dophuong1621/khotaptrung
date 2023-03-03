@@ -14,6 +14,10 @@ class Recharge extends Authenticatable
     protected $table = 'charge';
     protected $dates = ['deleted_at'];
 
+    public function user()
+    {
+        return $this->hasMany(User::class,'id','user_id');
+    }
     /**
      * The attributes that are mass assignable.
      *
