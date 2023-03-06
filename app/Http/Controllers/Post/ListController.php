@@ -17,6 +17,7 @@ class ListController extends Controller
     public function index()
     {
         $post = Item::where('module', 'post')->get();
+
         return view('post.index', [
             'post' => $post,
         ]);

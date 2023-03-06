@@ -11,8 +11,8 @@ class PostController extends Controller
     {
         $sessionId = session()->get('id');
         $usersHead = User::where('id', $sessionId)->get();
-
         $post = Item::where('module', 'post')->get();
+
         return view('users.post.list', [
             'users' => $usersHead,
             'post' => $post,
