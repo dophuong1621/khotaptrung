@@ -45,7 +45,6 @@
         <!--Grid row-->
     </section>
     <!-- Section: Links -->
-    </div>
     <!-- Grid container -->
 
     <!-- Copyright -->
