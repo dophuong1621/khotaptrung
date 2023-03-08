@@ -51,7 +51,7 @@ class ManagerController extends Controller
     {
         $sessionId = session()->get('id');
         $usersHead = User::where('id', $sessionId)->get();
-        return view('users.history.add_cart', [
+        return view('users.history.add_card', [
             'users' => $usersHead
         ]);
     }
