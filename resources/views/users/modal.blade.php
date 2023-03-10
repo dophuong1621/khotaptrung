@@ -464,7 +464,7 @@
         </div>
         <div class="login-body">
             <div class="w-100">
-                <img class="h-4r mx-auto"
+                <img class="h-4r mx-auto d-block"
                     src="https://cdns.diongame.com/static/image-87a3f611-cc43-4bc6-a047-a5de520ad6b6.png">
                 <h3 class="text-center text-lg fw-7 tw-text-blue mb-2r">
                     ĐĂNG NHẬP TÀI KHOẢN
