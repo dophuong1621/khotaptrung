@@ -30,7 +30,6 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        return 2222;
         $validator = Validator::make($request->all(), [
             'username' => 'required',
             'password' => 'required|string|min:6',
