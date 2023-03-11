@@ -3,21 +3,19 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Recharge;
+use App\Models\Item;
 use Illuminate\Http\Request;
-use JWTAuth;
-class RechargeController extends Controller
+
+class PostController extends Controller
 {
-    /**;
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        // $request->cookie('tokenLogin')
-        return Recharge::where('user_id', '454992')->orderBy('id', 'desc')->limit(5)->get();
+        return Item::where('module', 'post')->get();
     }
 
     /**
@@ -28,10 +26,7 @@ class RechargeController extends Controller
      */
     public function store(Request $request)
     {
-        return [
-            'update' => Recharge::create($request->all()),
-            'list' => Recharge::where('user_id', session('id'))->orderBy('id', 'desc')->limit(5)->get(),
-        ];
+        //
     }
 
     /**
@@ -42,7 +37,10 @@ class RechargeController extends Controller
      */
     public function show($id)
     {
-        //
+        return [
+            'postShow' => Item::where(['id' => $id, 'module' => 'post'])->firstorFail(),
+            'dongGia' => Item::where(['module' => 'post'])->limit(8)->get(),
+        ];
     }
 
     /**
