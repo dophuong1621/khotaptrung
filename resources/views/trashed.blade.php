@@ -54,7 +54,7 @@
                 <thead>
                     <tr>
                         <th class="text-center">ID</th>
-                        <th class="text-center">FullName</th>
+                        <th class="text-center">UserName</th>
                         <th class="text-center">Gender</th>
                         <th class="text-center">Phone</th>
                         <th class="text-center">Email</th>
@@ -68,7 +68,7 @@
                     <tr
                         @foreach ($user as $u)>
                         <td class="text-center">{{ $u->id }}</td>
-                        <td class="text-center">{{ $u->fullname }}</td>
+                        <td class="text-center">{{ $u->username }}</td>
                         <td class="text-center"><?= $u->gender == 1 ? 'Male' : 'Female' ?></td>
                         <td class="text-center">{{ $u->phone }}</td>
                         <td class="text-center">{{ $u->email }}</td>

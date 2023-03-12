@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
+use JWTAuth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -38,8 +38,7 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
-
-        if (!$token = auth()->attempt($validator->validated())) {
+        if (!$token = JWTAuth::attempt($validator->validated())) {
             return response()->json(['error' => 'Sai rồi nhé'], 401);
         }
 
@@ -98,10 +97,13 @@ class AuthController extends Controller
      */
     protected function createNewToken($token)
     {
+        // $token
+        // 'bearer'
+        // auth()->factory()->getTTL() * 60
         return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60,
+            'access_token' =>  $token,
+            'token_type' => setcookie('type_token', 'bearer', 3600),
+            'expires_in' => setcookie('expires_in', auth()->factory()->getTTL() * 60, 3600),
             'user' => auth()->user()
         ]);
     }

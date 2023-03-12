@@ -49,8 +49,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->update($request->all());
-        return $user;
+        return $user->update($request->all());
     }
 
     /**
@@ -61,6 +60,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->delete();
+        return User::where('id', $user['id'])->firstorfail()->delete();
     }
 }

@@ -12,8 +12,7 @@ class TrashedController extends Controller
     public function index(Request $request)
     {
         $search = $request->get('search');
-        $user = User::onlyTrashed()->where('fullname', 'like', '%' . $search . '%')->paginate(3);  // or withTrashed
-        // dd($user);
+        $user = User::onlyTrashed()->paginate(3);  // or withTrashed
         return view('trashed', compact('user'));
     }
 

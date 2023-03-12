@@ -60,6 +60,7 @@
     <script src="{{ asset('assetsU/js/home.js') }}"></script>
     <script src="{{ asset('assetsU/js/login.js') }}"></script>
     <script src="{{ asset('assetsU/js/recharge.js') }}"></script>
+    
 </body>
 
 </html>

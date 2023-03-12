@@ -18,15 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-Route::apiResource('/user', \App\Http\Controllers\Api\UserController::class);
-Route::apiResource('/recharge', \App\Http\Controllers\Api\RechargeController::class);
-Route::get('/top-card', [\App\Http\Controllers\Api\TopcardController::class, 'topCard']);
-Route::get('/robloxReputation', [\App\Http\Controllers\Api\TopcardController::class, 'robloxReputation']);
-Route::get('/superDeliciousAccount', [\App\Http\Controllers\Api\TopcardController::class, 'superDeliciousAccount']);
-Route::get('/openingGame', [\App\Http\Controllers\Api\TopcardController::class, 'openingGame']);
-Route::get('/ortherGame', [\App\Http\Controllers\Api\TopcardController::class, 'ortherGame']);
-
 Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
@@ -34,5 +25,30 @@ Route::group([
 ], function ($router) {
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
-    Route::post('/logout', [AuthController::class, 'logout']);
+    // Route::post('/logout', [AuthController::class, 'logout']);
 });
+
+Route::group(['middleware' => 'auth.jwt'], function () {
+    Route::post('/logout', [AuthController::class, 'logout']);
+
+    Route::apiResource('/post', \App\Http\Controllers\Api\PostController::class);
+});
+// Route::apiResource('/recharge', \App\Http\Controllers\Api\RechargeController::class);
+
+
+Route::apiResource('user', \App\Http\Controllers\Api\UserController::class);
+
+
+//trashed
+Route::delete('/trashed', [\App\Http\Controllers\Api\TrashedController::class, 'index']);
+Route::delete('/forceDelete/{id}', [\App\Http\Controllers\Api\TrashedController::class, 'forceDelete']);
+Route::delete('/restore/{id}', [\App\Http\Controllers\Api\TrashedController::class, 'restore']);
+Route::get('/restoreAll', [\App\Http\Controllers\Api\TrashedController::class, 'restoreAll']);
+
+Route::get('/top-card', [\App\Http\Controllers\Api\TopcardController::class, 'topCard']);
+Route::get('/robloxReputation', [\App\Http\Controllers\Api\TopcardController::class, 'robloxReputation']);
+Route::get('/superDeliciousAccount', [\App\Http\Controllers\Api\TopcardController::class, 'superDeliciousAccount']);
+Route::get('/openingGame', [\App\Http\Controllers\Api\TopcardController::class, 'openingGame']);
+Route::get('/ortherGame', [\App\Http\Controllers\Api\TopcardController::class, 'ortherGame']);
+
+
