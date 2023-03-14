@@ -25,22 +25,22 @@ use App\Http\Middleware\CheckLogin;
 
 Route::GET('home', [HomeController::class, 'index'])->name('home');
 
-// Route::middleware([CheckLogged::class])->group(function () {
-//     Route::POST('register', [RegisterController::class, 'register'])->name('register');
-//     Route::POST('login', [LoginController::class, 'login'])->name('login');
+Route::middleware([CheckLogged::class])->group(function () {
+    Route::POST('register', [RegisterController::class, 'register'])->name('register');
+    Route::POST('login', [LoginController::class, 'login'])->name('login');
 
-// });
-
-Route::group([
-    // 'middleware' => 'api',
-    'prefix' => 'auth'
-
-], function ($router) {
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
-    Route::post('/register', [AuthController::class, 'register'])->name('register');
-    // Route::post('/logout', [AuthController::class, 'logout']);
 });
-Route::resource('/recharge', \App\Http\Controllers\Api\RechargeController::class);
+
+// Route::group([
+//     // 'middleware' => 'api',
+//     'prefix' => 'auth'
+
+// ], function ($router) {
+//     Route::post('/login', [AuthController::class, 'login'])->name('login');
+//     Route::post('/register', [AuthController::class, 'register'])->name('register');
+//     // Route::post('/logout', [AuthController::class, 'logout']);
+// });
+// Route::resource('/recharge', \App\Http\Controllers\Api\RechargeController::class);
 Route::middleware([CheckLogin::class])->group(function () {
     Route::GET('logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -49,7 +49,7 @@ Route::middleware([CheckLogin::class])->group(function () {
         Route::GET('post/{id}', [PostController::class, 'showPost'])->name('showPost');
     });
 
-    // Route::GET('recharge', [RechargeController::class, 'recharge'])->name('recharge');
+    Route::GET('recharge', [RechargeController::class, 'recharge'])->name('recharge');
     Route::POST('recharge-prs', [RechargeController::class, 'rechargePrs'])->name('rechargePrs');
     Route::GET('repassword', [ChangePassController::class, 'repass'])->name('repass');
     Route::POST('repassword', [ChangePassController::class, 'updatePass'])->name('updatePass');

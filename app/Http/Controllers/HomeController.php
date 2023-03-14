@@ -39,7 +39,6 @@ class HomeController extends Controller
             ->orderBy('id', 'asc')
             ->limit(4)
             ->get();
-
         return view('users.trang-chu', [
             'topNap' => $top_nap,
             'users' => $usersHead,

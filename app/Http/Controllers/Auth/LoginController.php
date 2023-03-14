@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
-
-class LoginController extends Controller
+use Spatie\ResponseCache\Facades\ResponseCache;
+use Spatie\ResponseCache\Replacers\CsrfTokenReplacer;
+class LoginController extends Controller implements CsrfTokenReplacer
 {
     public function login(Request $request)
     {
@@ -29,7 +30,7 @@ class LoginController extends Controller
                 if (Hash::check($password, $login->password)) {
                     $request->session()->put('id', $login->id);
                     $request->session()->put('username', $login->username);
-
+                    // setcookie('user', $login->id, time() + (86400 / 24 / 60 * 30), "/");
                     $result = true;
                     $message = 'Đăng nhập thành công';
                 }

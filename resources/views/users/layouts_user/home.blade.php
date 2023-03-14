@@ -38,6 +38,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    {{-- <script src="path/to/jquery.js"></script>
+    <script src="path/to/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script> --}}
 </head>
 
 <body>
@@ -56,11 +60,13 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="{{ asset('assetsU/js/helper.js') }}"></script>
     <script src="{{ asset('assetsU/js/home.js') }}"></script>
     <script src="{{ asset('assetsU/js/login.js') }}"></script>
     <script src="{{ asset('assetsU/js/recharge.js') }}"></script>
-    
+    {{-- <script src="{{ asset('assetsU/js/check_token.js') }}"></script> --}}
+
 </body>
 
 </html>
