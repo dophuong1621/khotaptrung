@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Spatie\ResponseCache\Facades\ResponseCache;
 
 class RegisterController extends Controller
 {
@@ -23,6 +24,8 @@ class RegisterController extends Controller
 
                 $request->session()->put('id', $user);
                 $request->session()->put('username', $request->username);
+                ResponseCache::clear();
+
                 return Redirect::route('home');
             }
         }
