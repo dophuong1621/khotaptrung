@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+
 use JWTAuth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -97,14 +98,36 @@ class AuthController extends Controller
      */
     protected function createNewToken($token)
     {
-        // $token
-        // 'bearer'
-        // auth()->factory()->getTTL() * 60
         return response()->json([
-            'access_token' =>  $token,
-            'token_type' => setcookie('type_token', 'bearer', 3600),
-            'expires_in' => setcookie('expires_in', auth()->factory()->getTTL() * 60, 3600),
+            'access_token' => $token,
+            'token_type' => 'bearer',
+            'expires_in' => auth()->factory()->getTTL() / 60,
             'user' => auth()->user()
         ]);
+    }
+
+    /**
+     * Refresh a token.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function refresh()
+    {
+        return $this->createNewToken(auth()->refresh());
+    }
+
+    /**
+     * Get the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function userProfile()
+    {
+        // dd(auth()->user());
+        if (auth()->user()){
+            return response()->json(auth()->user());
+        }else{
+            return response()->json('status', "LOGIN");
+        }
     }
 }

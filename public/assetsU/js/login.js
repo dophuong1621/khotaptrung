@@ -13,14 +13,14 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/auth/login",
+            url: "/login",
             data: {
                 username: username,
                 password: password,
             },
             dataType: "json",
             success: function (response) {
-            
+
                 result = response.result;
                 message = response.message;
                 if (result == true) {
