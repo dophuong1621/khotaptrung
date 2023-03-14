@@ -9,8 +9,9 @@ use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Spatie\ResponseCache\Facades\ResponseCache;
-use Spatie\ResponseCache\Replacers\CsrfTokenReplacer;
-class LoginController extends Controller implements CsrfTokenReplacer
+use Spatie\ResponseCache\Replacers\Replacer;
+
+class LoginController extends Controller
 {
     public function login(Request $request)
     {
@@ -31,6 +32,7 @@ class LoginController extends Controller implements CsrfTokenReplacer
                     $request->session()->put('id', $login->id);
                     $request->session()->put('username', $login->username);
                     // setcookie('user', $login->id, time() + (86400 / 24 / 60 * 30), "/");
+                    ResponseCache::clear();
                     $result = true;
                     $message = 'Đăng nhập thành công';
                 }
@@ -46,6 +48,8 @@ class LoginController extends Controller implements CsrfTokenReplacer
     {
         // xoá session
         $request->session()->flush();
+        ResponseCache::clear();
+
         //điều hướng
         return Redirect::route("home");
     }
